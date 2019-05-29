@@ -7,7 +7,8 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model as Eloquent;
+//use Illuminate\Database\Eloquent\Model as Eloquent;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
 /**
  * Class User.
@@ -31,7 +32,8 @@ use Illuminate\Database\Eloquent\Model as Eloquent;
  * @property \Illuminate\Database\Eloquent\Collection $comptables
  * @property \Illuminate\Database\Eloquent\Collection $gestionnaires
  */
-class User extends Eloquent
+//class User extends Eloquent
+class User extends Authenticatable
 {
     use \Illuminate\Database\Eloquent\SoftDeletes;
 
