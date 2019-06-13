@@ -8,9 +8,11 @@
                                     <div class="ct-chart" id="dailySalesChart"></div>
                                 </div>
                                 <div class="card-body">
-                                    <h4 class="card-title">Nombre de clients</h4>
+                                    <h4 class="card-title">Statistiques clients</h4>
                                     <p class="card-category">
                                         <span class="text-success"><i class="fa fa-long-arrow-up"></i> 55% </span> increase in today sales.</p>
+                                         <p class="card-category">Details</p>
+                                          <p class="card-category">Demande client</p>
                                 </div>
                                 <div class="card-footer">
                                     <div class="stats">
@@ -25,8 +27,12 @@
                                     <div class="ct-chart" id="websiteViewsChart"></div>
                                 </div>
                                 <div class="card-body">
-                                    <h4 class="card-title">Nombre de villages</h4>
-                                    <p class="card-category">Last Campaign Performance</p>
+                                    <h4 class="card-title">Stats villages</h4>
+                                    <p class="card-category">Nombre de villages : </p>
+                                    <p class="card-category">Details : </p>
+                                     <p class="card-category">Nbr Chefs de villages : </p>
+
+
                                 </div>
                                 <div class="card-footer">
                                     <div class="stats">
@@ -41,8 +47,11 @@
                                     <div class="ct-chart" id="completedTasksChart"></div>
                                 </div>
                                 <div class="card-body">
-                                    <h4 class="card-title">Nombre de compteurs</h4>
-                                    <p class="card-category">Last Campaign Performance</p>
+                                    <h4 class="card-title">Compteurs</h4>
+                                    <p class="card-category">Abonnements</p>
+                                     <p class="card-category">Nombre de compteurs</p>
+                                      <p class="card-category">Demande de compteurs</p>
+
                                 </div>
                                 <div class="card-footer">
                                     <div class="stats">
