@@ -19,7 +19,7 @@
                     <tr>
                     <th scope="col">N°</th>
                     <th scope="col">Prénom</th>
-                    <th scope="col">Nom</th>
+                    <th scope="col">Noms</th>
                     <th scope="col">Handle</th>
                     </tr>
                 </thead>

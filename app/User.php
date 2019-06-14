@@ -1,15 +1,11 @@
 <?php
-
 /**
  * Created by Reliese Model.
  * Date: Tue, 28 May 2019 17:25:54 +0000.
  */
-
 namespace App;
-
 //use Illuminate\Database\Eloquent\Model as Eloquent;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-
 /**
  * Class User.
  *
@@ -36,19 +32,15 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class User extends Authenticatable
 {
 use \Illuminate\Database\Eloquent\SoftDeletes;use\App\Helpers\UuidForKey;
-
     protected $casts = [
         'roles_id' => 'int',
     ];
-
     protected $dates = [
         'email_verified_at',
     ];
-
     protected $hidden = [
         'password',
     ];
-
     protected $fillable = [
         'uuid',
         'firstname',
@@ -59,32 +51,26 @@ use \Illuminate\Database\Eloquent\SoftDeletes;use\App\Helpers\UuidForKey;
         'password',
         'roles_id',
     ];
-
     public function role()
     {
         return $this->belongsTo(\App\Role::class, 'roles_id');
     }
-
     public function administrateur()
     {
         return $this->hasone(\App\Administrateur::class, 'users_id');
     }
-
     public function agent()
     {
         return $this->hasone(\App\Agent::class, 'users_id');
     }
-
     public function client()
     {
         return $this->hasone(\App\Client::class, 'users_id');
     }
-
     public function comptable()
     {
         return $this->hasone(\App\Comptable::class, 'users_id');
     }
-
     public function gestionnaire()
     {
         return $this->hasone(\App\Gestionnaire::class, 'users_id');

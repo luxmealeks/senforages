@@ -2,10 +2,10 @@
 @include ('layout.dashboard.navbar')
 @include('layout.dashboard.sidebar')
 @extends('layouts.app')
-
 @yield('navmenuSM')
   @yield('navbare')
  <div class="wrapper ">
+
             <div class="main-panel">
                 <div class="jumbotron jumbotron-fluid">
   <div class="container">
@@ -20,7 +20,7 @@
 
 <form>
     <div class="form-group">
-        <label for="input-prenom">Nom du village </label>
+        <label for="input-prenom">Noms du village </label>
         <input type="text" name="prenom" class="form-control" id="input-prenom" aria-describedby="emailHelp" placeholder="Entrer le nom du  SVP">
     </div>
     <button type="submit" class="btn btn-primary">Enregistrer</button>
@@ -31,3 +31,6 @@
   </div>
     </div>
       </div>
+
+
+

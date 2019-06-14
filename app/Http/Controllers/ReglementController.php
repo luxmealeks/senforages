@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\ClientForage;
+use App\Reglement;
 use Illuminate\Http\Request;
 
-class ClientForageController extends Controller
+class ReglementController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class ClientForageController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\ClientForage  $clientForage
+     * @param  \App\Reglement  $reglement
      * @return \Illuminate\Http\Response
      */
-    public function show(ClientForage $clientForage)
+    public function show(Reglement $reglement)
     {
         //
     }
@@ -52,10 +52,10 @@ class ClientForageController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\ClientForage  $clientForage
+     * @param  \App\Reglement  $reglement
      * @return \Illuminate\Http\Response
      */
-    public function edit(ClientForage $clientForage)
+    public function edit(Reglement $reglement)
     {
         //
     }
@@ -64,10 +64,10 @@ class ClientForageController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\ClientForage  $clientForage
+     * @param  \App\Reglement  $reglement
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, ClientForage $clientForage)
+    public function update(Request $request, Reglement $reglement)
     {
         //
     }
@@ -75,10 +75,10 @@ class ClientForageController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\ClientForage  $clientForage
+     * @param  \App\Reglement  $reglement
      * @return \Illuminate\Http\Response
      */
-    public function destroy(ClientForage $clientForage)
+    public function destroy(Reglement $reglement)
     {
         //
     }
