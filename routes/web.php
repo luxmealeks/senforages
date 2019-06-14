@@ -35,7 +35,9 @@ Route::get('/temp/', function () {
 Route::resource('clients', 'ClientForageController');
 
 
-Route::get('/village', 'VillageController@index')->name('index');
+//Route::get('/village', 'VillageController@index')->name('index');
+Route::resource('/village', 'VillageController');
+
 
 // Route::get('/village', function () {
 //     return view('layout.villages.');

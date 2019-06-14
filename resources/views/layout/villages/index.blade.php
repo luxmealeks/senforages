@@ -47,7 +47,7 @@
                                 {{$village->chef->user->name."  ".$village->chef->user->firstname}}
                           </td>
                           <td>
-                              <a class="btn btn-primary" href={{route('layout.villages.show',['village'=>$village->id])}}><i class="material-icons">edit</i> </a>
+                              <a class="btn btn-primary" href={{route('villages.show',['village'=>$village->id])}}><i class="material-icons">edit</i> </a>
                           </td>
 
                         </tr>

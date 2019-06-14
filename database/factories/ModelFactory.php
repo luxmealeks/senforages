@@ -119,20 +119,30 @@ $factory->define(App\Consommation::class, function (Faker\Generator $faker) {
 // });
 
 $factory->define(App\Client::class, function (Faker\Generator $faker) {
+    $id_village=App\Village::get()->random()->id;
+    $id_gestionnaire=App\Gestionnaire::get()->random()->id;
     $role_id = App\Role::where('name', 'Client')->first()->id;
+
 
     return [
        // 'uuid' => $faker->uuid,
         'matricule' => 'CLI'.$faker->word,
-        'village_id' => function () {
-            return factory(App\Village::class)->create()(["roles_id"=>$role_id])->id;
-
+        'village_id' => function () use($id_village) {
+            //return factory(App\Village::class)->create()(["roles_id"=>$role_id])->id;
+            return $id_village;
         },
-         'gestionnaires_id' => function () {
-             //return factory(App\Gestionnaire::class)->create()->id;
-             return factory(App\Gestionnaire::class)->create(["roles_id"=>$role_id])->id;
 
-         },
+
+         'gestionnaires_id' => function () use($id_gestionnaire) {
+            //return factory(App\Village::class)->create()(["roles_id"=>$role_id])->id;
+            return $id_gestionnaire;
+        },
+        //  'gestionnaires_id' => function () {
+        //      //return factory(App\Gestionnaire::class)->create()->id;
+        //      return factory(App\Gestionnaire::class)->create(["roles_id"=>$role_id])->id;
+
+        //  },
+
          'users_id' => function () {
             // return factory(App\User::class)->create()->id;
              return factory(App\User::class)->create(["roles_id"=>$role_id])->id;
