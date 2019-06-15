@@ -174,10 +174,15 @@
             // Javascript method's body can be found in assets/js/demos.js
             md.initDashboardPageCharts();
 
+
         });
     </script>
-<script type="text/javascript" src="{{asset('assets/DataTables/datatables.min.js')}}"></script>
+{{-- <script type="text/javascript" src="{{asset('assets/DataTables/datatables.min.js')}}"></script>
+<script>
+console.log("test2");
 
-@stack ('scripts')
+        </script>
+
+@stack ('scripts') --}}
 
 

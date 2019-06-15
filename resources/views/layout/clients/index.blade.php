@@ -1,5 +1,6 @@
 @extends('layout.dashboard.default')
 @section('content')
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/DataTables/datatables.min.css')}}>
 
 
 <div class="content">
@@ -52,8 +53,10 @@
       @endsection
 
       @push('scripts')
-      <script type="text/javascript">
+
+<script type="text/javascript">
       $(document).ready(function () {
+
           $('#table-clients').DataTable( {
             "processing": true,
             "serverSide": true,

@@ -29,9 +29,8 @@ Route::get('/users/', function () {
 Route::get('/temp/', function () {
     return view('layout.dashboard.template');
 });
-
-Route::resource('clients', 'ClientController');
 Route::get('/clients/list', 'ClientController@list')->name('clients.list');
+Route::resource('clients', 'ClientController');
 
 Route::resource('villages', 'VillageController');
 

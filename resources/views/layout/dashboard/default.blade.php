@@ -1,5 +1,5 @@
 
-@extends ('layout.dashboard.style')
+@include ('layout.dashboard.style')
 
 <body class="">
     <div class="wrapper ">
