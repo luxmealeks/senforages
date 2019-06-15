@@ -31,9 +31,12 @@ Route::get('/temp/', function () {
 });
 
 Route::resource('clients', 'ClientController');
+Route::get('/clients/list', 'ClientController@list')->name('clients.list');
 
 Route::resource('villages', 'VillageController');
 
 Route::get('/compteurs', function () {
     return view('layout.compteurs.createcompteur');
 });
+
+

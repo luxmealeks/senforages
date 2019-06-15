@@ -176,3 +176,8 @@
 
         });
     </script>
+<script type="text/javascript" src="{{asset('assets/DataTables/datatables.min.js')}}"></script>
+
+@stack ('scripts')
+
+

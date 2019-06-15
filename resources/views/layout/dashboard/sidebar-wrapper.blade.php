@@ -28,13 +28,13 @@
                             </a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link" href="./home">
+                            <a class="nav-link" href="./clients">
                                 <i class="material-icons">person_pin</i></i>
                                 <p>Gestion des clients</p>
                             </a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link" href="./home">
+                            <a class="nav-link" href="./factures">
                                 <i class="material-icons">dehaze</i>
                                 <p>Gestion des factures</p>
                             </a>

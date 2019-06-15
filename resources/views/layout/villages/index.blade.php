@@ -1,4 +1,3 @@
-
 @extends ('layout.dashboard.default')
 @section('content')
 

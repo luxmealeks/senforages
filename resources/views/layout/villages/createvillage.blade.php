@@ -1,4 +1,4 @@
-@include('layout.dashboard.style')
+{{-- @include('layout.dashboard.style')
 @include ('layout.dashboard.navbar')
 @include('layout.dashboard.sidebar')
 @extends('layouts.app')
@@ -33,4 +33,4 @@
       </div>
 
 
-
+ --}}

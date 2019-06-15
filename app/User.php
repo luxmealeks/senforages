@@ -33,6 +33,7 @@ class User extends Authenticatable
 {
 use \Illuminate\Database\Eloquent\SoftDeletes;
 use\App\Helpers\UuidForKey;
+
     protected $casts = [
         'roles_id' => 'int',
     ];

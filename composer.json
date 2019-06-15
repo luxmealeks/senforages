@@ -15,7 +15,8 @@
         "laravel/tinker": "^1.0",
         "mpociot/laravel-test-factory-helper": "^0.5.0",
         "reliese/laravel": "^0.0.13",
-        "spatie/laravel-collection-macros": "^4.3"
+        "spatie/laravel-collection-macros": "^4.3",
+        "yajra/laravel-datatables-oracle": "~9.0"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
