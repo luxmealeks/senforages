@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\Model as Eloquent;
 
 /**
  * Class Facture
- * 
+ *
  * @property int $id
  * @property string $uuid
  * @property \Carbon\Carbon $date_limite
@@ -22,7 +22,7 @@ use Illuminate\Database\Eloquent\Model as Eloquent;
  * @property string $deleted_at
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
- * 
+ *
  * @property \Illuminate\Database\Eloquent\Collection $consommations
  * @property \Illuminate\Database\Eloquent\Collection $reglements
  *
@@ -30,7 +30,8 @@ use Illuminate\Database\Eloquent\Model as Eloquent;
  */
 class Facture extends Eloquent
 {
-	use \Illuminate\Database\Eloquent\SoftDeletes;
+    use \Illuminate\Database\Eloquent\SoftDeletes;
+    use\App\Helpers\UuidForKey;
 
 	protected $casts = [
 		'montant' => 'float'

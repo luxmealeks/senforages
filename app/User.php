@@ -31,7 +31,8 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 //class User extends Eloquent
 class User extends Authenticatable
 {
-use \Illuminate\Database\Eloquent\SoftDeletes;use\App\Helpers\UuidForKey;
+use \Illuminate\Database\Eloquent\SoftDeletes;
+use\App\Helpers\UuidForKey;
     protected $casts = [
         'roles_id' => 'int',
     ];
