@@ -406,6 +406,7 @@
                                 </tr>
                             </tbody>
                         </table>
+                         @show
                     </div>
                 </div>
             </div>

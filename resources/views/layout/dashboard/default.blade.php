@@ -22,8 +22,10 @@
 
 
                         <div class="content">
+                                  @yield('content')
 
-                            @include ("layout.dashboard.main-content")
+
+                            {{-- @include ("layout.dashboard.main-content") --}}
                          </div>
 
                         <!-- End main-content -->
