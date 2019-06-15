@@ -22,7 +22,7 @@
                             </a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link" href="./village">
+                            <a class="nav-link" href="./villages">
                                 <i class="material-icons">account_balance</i>
                                 <p>Gestion des villages</p>
                             </a>

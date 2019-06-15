@@ -8,8 +8,8 @@
             <div class="col-md-12">
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h4 class="card-title ">SENFORAGE</h4>
-                  <p class="card-category"> Villages</p>
+                  <h4 class="card-title ">APPLICATION SENFORAGE</h4>
+                  <p class="card-category"> liste des Villages</p>
                 </div>
                 <div class="card-body">
                   <div class="table-responsive">
@@ -29,6 +29,7 @@
                         </th>
                       </thead>
                       <tbody>
+
                           @foreach ($villages as $village)
 
 

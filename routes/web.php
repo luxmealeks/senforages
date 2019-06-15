@@ -30,18 +30,9 @@ Route::get('/temp/', function () {
     return view('layout.dashboard.template');
 });
 
-//Route::resource('villages', 'VillageController');
+Route::resource('clients', 'ClientController');
 
-Route::resource('clients', 'ClientForageController');
-
-
-//Route::get('/village', 'VillageController@index')->name('index');
-Route::resource('/village', 'VillageController');
-
-
-// Route::get('/village', function () {
-//     return view('layout.villages.');
-// });
+Route::resource('villages', 'VillageController');
 
 Route::get('/compteurs', function () {
     return view('layout.compteurs.createcompteur');

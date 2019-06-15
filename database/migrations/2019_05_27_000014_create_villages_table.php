@@ -23,7 +23,7 @@ class CreateVillagesTable extends Migration
         Schema::create($this->tableName, function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->char('uuid', 36);
+            $table->char('uuid', 36)->nullable();
             $table->string('nom', 200)->nullable();
             $table->integer('chef_id')->nullable();
             $table->unsignedInteger('communes_id');
