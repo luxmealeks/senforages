@@ -4,7 +4,7 @@
 @include('layout.dashboard.sidebar')
 @extends('layouts.app')
 @yield('navmenuSM')
-  @yield('navbare')
+  {{-- @yield('navbare') --}}
 {{-- @include('layouts.app') --}}
 {{-- @include('layout.dashboard.jumbotron')
  --}}
@@ -28,7 +28,7 @@
 
 <br><br><br>
 
- @include('layout.dashboard.content')
+ @include('layout.dashboard.default')
 
 
 </div>

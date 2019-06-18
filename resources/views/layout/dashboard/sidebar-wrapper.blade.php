@@ -1,5 +1,6 @@
 @extends('layout.dashboard.style')
-{{-- @section('sidebarwrapper') --}}
+{{-- @extends('layout.dashboard.asset') --}}
+{{-- @extends('layout.dashboard.script') --}}
             <ul class="nav">
                         <li class="nav-item active  ">
                             <a class="nav-link" href="./home">
@@ -9,37 +10,55 @@
                         </li>
 
                         <li class="dropdown ">
-                            <a class="nav-link" href="./users">
+                            <a class="nav-link" href="./utilisateurs">
                                 <i class="material-icons">people</i>
-                                <p>Gestion des utilisateurs</p>
-                            </a>
-                        </li>
-
-                        <li class="nav-item ">
-                            <a class="nav-link" href="./compteurs">
-                                <i class="material-icons">ac_unit</i>
-                                <p>Gestion des compteurs</p>
+                                <p>Utilisateurs</p>
                             </a>
                         </li>
                         <li class="nav-item ">
                             <a class="nav-link" href="./villages">
                                 <i class="material-icons">account_balance</i>
-                                <p>Gestion des villages</p>
+                                <p>Villages</p>
                             </a>
                         </li>
                         <li class="nav-item ">
                             <a class="nav-link" href="./clients">
                                 <i class="material-icons">person_pin</i></i>
-                                <p>Gestion des clients</p>
+                                <p>Clients</p>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="./compteurs">
+                                <i class="material-icons">ac_unit</i>
+                                <p>Abonnements</p>
+                            </a>
+                        </li>
+                            <li class="nav-item ">
+                            <a class="nav-link" href="./factures">
+                                <i class="material-icons">dehaze</i>
+                                <p>Consommations</p>
+                            </a>
+                        </li>
+                         <li class="nav-item ">
+                            <a class="nav-link" href="./factures">
+                                <i class="material-icons">dehaze</i>
+                                <p>Réglements</p>
                             </a>
                         </li>
                         <li class="nav-item ">
                             <a class="nav-link" href="./factures">
                                 <i class="material-icons">dehaze</i>
-                                <p>Gestion des factures</p>
+                                <p>Factures</p>
+                            </a>
+                        </li>
+                          <li class="nav-item ">
+                            <a class="nav-link" href="./factures">
+                                <i class="material-icons">dehaze</i>
+                                <p>Paramétrage</p>
                             </a>
                         </li>
 
+
+
             </ul>
-{{-- @endsection
- --}}
+

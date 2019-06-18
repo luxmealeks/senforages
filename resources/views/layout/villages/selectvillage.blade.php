@@ -1,18 +1,7 @@
 @extends ('layout.dashboard.default')
-@include('layout.dashboard.style')
-
-@include ('layout.dashboard.navbar')
-@include('layout.dashboard.sidebar')
-
-@yield('navmenuSM')
-@yield('navbare')
-<br><br>
-
-{{-- @extends('layouts.app') --}}
 @section('content')
 
 <div class="content">
-
         <div class="container-fluid">
           <div class="row">
             <div class="col-md-12">

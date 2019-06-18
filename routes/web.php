@@ -22,13 +22,13 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/users/', function () {
-    return view('layout.users.createusers');
+Route::get('/utilisateurs/', function () {
+    return view('layout.utilisateurs.index');
 });
 
-Route::get('/temp/', function () {
-    return view('layout.dashboard.template');
-});
+// Route::get('/temp/', function () {
+//     return view('layout.dashboard.template');
+// });
 Route::get('/clients/list', 'ClientController@list')->name('clients.list');
 Route::resource('clients', 'ClientController');
 

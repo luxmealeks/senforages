@@ -1,6 +1,6 @@
 <div class="container-fluid">
         <nav class="float-left">
-            <ul>
+            {{-- <ul>
                 <li>
                     <a href=#">
       SENFORAGE
@@ -12,7 +12,7 @@
     </a>
                 </li>
 
-            </ul>
+            </ul> --}}
         </nav>
         <div class="copyright float-right">
             &copy;
