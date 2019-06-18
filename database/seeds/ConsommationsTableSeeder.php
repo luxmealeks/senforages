@@ -11,6 +11,7 @@ class ConsommationsTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        factory(App\Consommations::class, 10)->create();
+
     }
 }

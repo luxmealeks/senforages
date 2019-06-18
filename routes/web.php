@@ -33,9 +33,11 @@ Route::get('/clients/list', 'ClientController@list')->name('clients.list');
 Route::resource('clients', 'ClientController');
 
 Route::resource('villages', 'VillageController');
+Route::resource('compteurs', 'CompteurController');
 
-Route::get('/compteurs', function () {
-    return view('layout.compteurs.createcompteur');
-});
+
+// Route::get('/compteurs', function () {
+//     return view('layout.compteurs.index');
+// });
 
 

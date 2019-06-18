@@ -1,13 +1,15 @@
 @extends ('layout.dashboard.default')
 @include('layout.dashboard.style')
 
-
 @include ('layout.dashboard.navbar')
 @include('layout.dashboard.sidebar')
+
+@yield('navmenuSM')
 @yield('navbare')
-<br><br><br>
+<br><br>
+
+{{-- @extends('layouts.app') --}}
 @section('content')
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/DataTables/datatables.min.css')}}>
 
 <div class="content">
 
@@ -17,7 +19,7 @@
               <div class="card">
                 <div class="card-header card-header-primary">
                   <h4 class="card-title ">APPLICATION SENFORAGE</h4>
-                  <p class="card-category"> liste des Abonnements</p>
+                  <p class="card-category"> Consommations</p>
                 </div>
                 <div class="card-body">
                   <div class="table-responsive">
@@ -27,36 +29,33 @@
                           ID
                         </th>
                         <th>
-                          Nom
+                          Numero de série
                         </th>
-                        <th>
-                            Chef
-                        </th>
-                        <th>
-                          Info
-                        </th>
+
                       </thead>
                       <tbody>
 
-                          @foreach ($compteurs as $village)
+                          @foreach ($compteurs as $compteur)
 
 
 
                         <tr>
                           <td>
-                            {{$village->id}}
+                            {{$compteur->id}}
                           </td>
                           <td>
-                            {{$village->nom}}<br>
-                            Region de {{$village->commune->arrondissement->departement->region->nom}}<br>
-                            Commune de {{$village->commune->nom}}
+                            {{$compteur->numero_serie}}<br>
+                            {{-- Region de {{$compteur->commune->arrondissement->departement->region->nom}}<br>
+                            Commune de {{$compteur->commune->nom}} --}}
 
                           </td>
                           <td>
-                                {{$village->chef->user->name."  ".$village->chef->user->firstname}}
+                                {{-- {{$compteur->chef->user->name."  ".$compteur->chef->user->firstname}} --}}
+                                {{$compteur->numero_serie}}
+
                           </td>
                           <td>
-                              <a class="btn btn-primary" href={{route('compteurs.show',['village'=>$village->id])}}><i class="material-icons">edit</i> </a>
+                              <a class="btn btn-primary" href={{route('compteurs.show',['compteur'=>$compteur->id])}}><i class="material-icons">edit</i> </a>
                           </td>
 
                         </tr>

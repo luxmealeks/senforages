@@ -28,9 +28,15 @@
                             </a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link" href="./compteurs">
+                            <a class="nav-link" href="./abonnements">
                                 <i class="material-icons">ac_unit</i>
                                 <p>Abonnements</p>
+                            </a>
+                        </li>
+                         <li class="nav-item ">
+                            <a class="nav-link" href="./compteurs">
+                                <i class="material-icons">ac_unit</i>
+                                <p>Compteurs</p>
                             </a>
                         </li>
                             <li class="nav-item ">

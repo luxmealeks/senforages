@@ -1,4 +1,3 @@
-
 @extends ('layout.dashboard.style')
 <body class="content">
     <div class="wrapper ">

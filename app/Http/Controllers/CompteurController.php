@@ -2,11 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Consommation;
+use App\Compteur;
 use Illuminate\Http\Request;
 
-class ConsommationController extends Controller
+class CompteurController extends Controller
 {
+
+     public function list(Request $request)
+    {
+        $compteurs=Compteur::get();
+        return Datatables::of($compteurs)->make(true);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +21,10 @@ class ConsommationController extends Controller
      */
     public function index()
     {
-        return('view.consommations.index');
+
+         $compteurs=Compteur::all()->paginate(10);
+        return view('layout.compteurs.index',compact('compteurs'));
+
     }
 
     /**
@@ -41,10 +51,10 @@ class ConsommationController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Consommation  $consommation
+     * @param  \App\Compteur  $compteur
      * @return \Illuminate\Http\Response
      */
-    public function show(Consommation $consommation)
+    public function show(Compteur $compteur)
     {
         //
     }
@@ -52,10 +62,10 @@ class ConsommationController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Consommation  $consommation
+     * @param  \App\Compteur  $compteur
      * @return \Illuminate\Http\Response
      */
-    public function edit(Consommation $consommation)
+    public function edit(Compteur $compteur)
     {
         //
     }
@@ -64,10 +74,10 @@ class ConsommationController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Consommation  $consommation
+     * @param  \App\Compteur  $compteur
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Consommation $consommation)
+    public function update(Request $request, Compteur $compteur)
     {
         //
     }
@@ -75,10 +85,10 @@ class ConsommationController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Consommation  $consommation
+     * @param  \App\Compteur  $compteur
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Consommation $consommation)
+    public function destroy(Compteur $compteur)
     {
         //
     }
