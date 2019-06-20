@@ -48,7 +48,7 @@
 
                       </thead>
                       <tbody>
-
+{{-- ce code ci-dessous est commenté parcequ'on utilise ajax pour charger les données --}}
                           {{-- @foreach ($users as $user)
 
 

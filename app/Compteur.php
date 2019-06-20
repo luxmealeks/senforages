@@ -25,7 +25,8 @@ use Illuminate\Database\Eloquent\Model as Eloquent;
  */
 class Compteur extends Eloquent
 {
-use \Illuminate\Database\Eloquent\SoftDeletes;use\App\Helpers\UuidForKey;
+    use \Illuminate\Database\Eloquent\SoftDeletes;
+    use\App\Helpers\UuidForKey;
 
     protected $casts = [
         'administrateurs_id' => 'int',
@@ -42,9 +43,9 @@ use \Illuminate\Database\Eloquent\SoftDeletes;use\App\Helpers\UuidForKey;
         return $this->belongsTo(\App\Administrateur::class, 'administrateurs_id');
     }
 
-    public function abonnements()
+    public function abonnement()
     {
-        return $this->hasMany(\App\Abonnement::class, 'compteurs_id');
+        return $this->hasOne(\App\Abonnement::class, 'compteurs_id');
     }
 
     public function consommations()

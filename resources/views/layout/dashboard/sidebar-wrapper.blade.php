@@ -40,7 +40,7 @@
                             </a>
                         </li>
                             <li class="nav-item ">
-                            <a class="nav-link" href="./factures">
+                            <a class="nav-link" href="./consommations">
                                 <i class="material-icons">dehaze</i>
                                 <p>Consommations</p>
                             </a>

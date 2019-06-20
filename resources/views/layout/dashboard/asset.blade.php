@@ -17,7 +17,7 @@
  <!--  Plugin for the DateTimePicker, full documentation here: https://eonasdan.github.io/bootstrap-datetimepicker/ -->
  <script src={{asset('assets/js/plugins/bootstrap-datetimepicker.min.js')}}"></script>
  <!--  DataTables.net Plugin, full documentation here: https://datatables.net/  -->
- <script src={{asset('assets/js/plugins/jquery.dataTables.min.js')}}"></script>
+ {{-- <script src={{asset('assets/js/plugins/jquery.dataTables.min.js')}}"></script> --}}
  <!--	Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
  <script src={{asset('assets/js/plugins/bootstrap-tagsinput.js')}}"></script>
  <!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
@@ -47,6 +47,21 @@
 console.log("test2");
 
         </script> --}}
+
+
+
+ {{--<div id="qrcode"></div>
+
+ <script type="text/javascript" src="{{asset('assets/qrcodejs/jquery.min.js')}}">
+var qrcode = new QRCode(document.getElementById("qrcode"), {
+	text: "http://jindo.dev.naver.com/collie",
+	width: 128,
+	height: 128,
+	colorDark : "#000000",
+	colorLight : "#ffffff",
+	correctLevel : QRCode.CorrectLevel.H
+});
+</script> --}}
 
 @stack ('scripts')
 
