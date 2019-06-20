@@ -54,9 +54,6 @@
                           </td>
                           <td>
                             {{$compteur->numero_serie}}<br>
-                            {{-- Region de {{$compteur->commune->arrondissement->departement->region->nom}}<br>
-                            Commune de {{$compteur->commune->nom}} --}}
-
                           </td>
 
                           <td>

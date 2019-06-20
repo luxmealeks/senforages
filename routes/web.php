@@ -22,8 +22,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/utilisateurs/', function () {
-    return view('layout.utilisateurs.index');
+Route::get('/users/', function () {
+    return view('layout.users.index');
 });
 
 // Route::get('/temp/', function () {
@@ -34,6 +34,10 @@ Route::resource('clients', 'ClientController');
 
 Route::resource('villages', 'VillageController');
 Route::resource('compteurs', 'CompteurController');
+Route::get('/users/list', 'UserController@list')->name('users.list');
+Route::resource('users', 'UserController');
+Route::resource('factures', 'FactureController');
+
 
 
 // Route::get('/compteurs', function () {

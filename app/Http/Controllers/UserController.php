@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Compteur;
+use App\User;
 use Illuminate\Http\Request;
+use Yajra\Datatables\Datatables;
 
-class CompteurController extends Controller
+class UserController extends Controller
 {
-
-     public function list(Request $request)
+    public function list(Request $request)
     {
-        $compteurs=Compteur::get();
-        return Datatables::of($compteurs)->make(true);
+        $users = User::get()->load('role');
 
+        return Datatables::of($users)->make(true);
     }
 
     /**
@@ -22,10 +22,7 @@ class CompteurController extends Controller
      */
     public function index()
     {
-        $compteurs=Compteur::all()->load(['abonnements.client.user'])->paginate(10);
-        //  $compteurs=Compteur::all()->paginate(10);
-        return view('layout.compteurs.index',compact('compteurs'));
-
+        return view('layout.users.index');
     }
 
     /**
@@ -35,62 +32,62 @@ class CompteurController extends Controller
      */
     public function create()
     {
-        //
+        return view('layout.users.create', compact('users'));
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
+     *
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Compteur  $compteur
+     * @param \App\User $user
+     *
      * @return \Illuminate\Http\Response
      */
-    public function show(Compteur $compteur)
+    public function show(User $user)
     {
-        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Compteur  $compteur
+     * @param \App\User $user
+     *
      * @return \Illuminate\Http\Response
      */
-    public function edit(Compteur $compteur)
+    public function edit(User $user)
     {
-        //
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Compteur  $compteur
+     * @param \Illuminate\Http\Request $request
+     * @param \App\User                $user
+     *
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Compteur $compteur)
+    public function update(Request $request, User $user)
     {
-        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Compteur  $compteur
+     * @param \App\User $user
+     *
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Compteur $compteur)
+    public function destroy(User $user)
     {
-        //
     }
 }

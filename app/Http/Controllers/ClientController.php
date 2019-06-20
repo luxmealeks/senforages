@@ -31,14 +31,14 @@ class ClientController extends Controller
      */
     public function create(Request $request)
     {
-        //
+
         // $this->validate(
         //     $request, [
-        //         'village' => 'required|exists:villages,id',
+        //         'client' => 'required|exists:clients,id',
         //     ]);
-        $village_id=$request->input('village');
-        $village=\App\Village::find($village_id);
-        return view('clients.create',compact('village'));
+        // $client_id=$request->input('client');
+        // $client=\App\Client::find($client_id);
+        return view('layout.clients.create');
     }
 
     /**
@@ -49,17 +49,17 @@ class ClientController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        $this->validate(
-            $request, [
-                'nom' => 'required|string|max:50',
-                'prenom' => 'required|string|max:50',
-                'email' => 'required|email|max:255|unique:users,email',
-                'password' => 'required|string|max:50',
-                'village' => 'required|exists:villages,id',
-            ]
-        );
-        return view('layout.clients.index');
+        // //
+        // $this->validate(
+        //     $request, [
+        //         'nom' => 'required|string|max:50',
+        //         'prenom' => 'required|string|max:50',
+        //         'email' => 'required|email|max:255|unique:users,email',
+        //         'password' => 'required|string|max:50',
+        //         'village' => 'required|exists:villages,id',
+        //     ]
+        // );
+        // return view('layout.clients.index');
 
     }
 

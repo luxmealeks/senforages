@@ -1,7 +1,5 @@
 @extends ('layout.dashboard.default')
 @include('layout.dashboard.style')
-
-
 @include ('layout.dashboard.navbar')
 @include('layout.dashboard.sidebar')
 @yield('navbare')
@@ -18,7 +16,7 @@
                 <div class="card-header card-header-primary">
                   <h4 class="card-title ">SENFORAGE</h4>
                   <p class="card-category"> Clients
-                      <a href="{{route('clients.create')}}"><div class="btn btn-warning">Nouveau Client <i class="material-icons">add</i></div></a>
+                      <a href="{{route('clients.create')}}"><div class="btn btn-warning">Ajouter Client <i class="material-icons">add</i></div></a>
                   </p>
                 </div>
                 <div class="card-body">

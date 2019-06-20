@@ -1,3 +1,4 @@
+{{-- @include('layout.dashboard.default') --}}
 
 @include('layout.dashboard.style')
 @include ('layout.dashboard.navbar')

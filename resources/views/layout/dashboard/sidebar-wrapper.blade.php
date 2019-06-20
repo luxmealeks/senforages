@@ -9,8 +9,8 @@
                             </a>
                         </li>
 
-                        <li class="dropdown ">
-                            <a class="nav-link" href="./utilisateurs">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./users">
                                 <i class="material-icons">people</i>
                                 <p>Utilisateurs</p>
                             </a>
