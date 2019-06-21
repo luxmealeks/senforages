@@ -20,7 +20,7 @@ Route::get('/accueil/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('default');
 
 Route::get('/users/', function () {
     return view('layout.users.index');

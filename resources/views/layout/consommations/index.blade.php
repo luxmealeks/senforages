@@ -1,13 +1,5 @@
 
-            @extends ('layout.dashboard.default')
-{{-- @include('layout.dashboard.style')
-@include ('layout.dashboard.navbar')
-@include('layout.dashboard.sidebar') --}}
-{{-- @include ('layout.dashboard.asset') --}}
-
-{{-- @yield('navbare') --}}
-<br><br><br>
-
+@extends ('layout.dashboard.default')
 @section('content')
     <link rel="stylesheet" type="text/css" href="{{asset('assets/DataTables/datatables.min.css')}}>
 
@@ -32,11 +24,15 @@
                           ID
                         </th>
                         <th>
+                          Date consommation
+                          </th>
+                        <th>
                           N° Serie compteur
                         </th>
-                         <th>
+
+                           {{-- <th>
                           Détails
-                          </th>
+                          </th> --}}
                            <th>
                           Nom
                           </th>
@@ -77,8 +73,9 @@
             "ajax": "{{route('consommations.list')}}",
             columns: [
                     { data: 'id', name: 'id' },
+                    { data: 'date', name: 'date' },
                     { data: 'compteur.numero_serie', name: 'compteur.numero_serie' },
-                    { data: 'compteur.abonnement.details', name: 'compteur.abonnement.details' },
+                    // { data: 'compteur.abonnement.details', name: 'compteur.abonnement.details' },
                     { data: 'compteur.abonnement.client.user.name', name: 'compteur.abonnement.client.user.name' },
                     { data: 'compteur.abonnement.client.user.firstname', name:'compteur.abonnement.client.user.firstname' },
                     { data: null ,orderable: false, searchable: false}

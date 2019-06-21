@@ -1,6 +1,4 @@
-@extends('layout.dashboard.style')
-{{-- @extends('layout.dashboard.asset') --}}
-{{-- @extends('layout.dashboard.script') --}}
+
             <ul class="nav">
                         <li class="nav-item active  ">
                             <a class="nav-link" href="./home">
@@ -63,8 +61,5 @@
                                 <p>Paramétrage</p>
                             </a>
                         </li>
-
-
-
             </ul>
 

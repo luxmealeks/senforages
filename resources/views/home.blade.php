@@ -1,10 +1,10 @@
 {{-- @include('layout.dashboard.default') --}}
 
-@include('layout.dashboard.style')
-@include ('layout.dashboard.navbar')
+@include('layout.dashboard.default')
+{{-- @include ('layout.dashboard.navbar')
 @include('layout.dashboard.sidebar')
 @extends('layouts.app')
-@yield('navmenuSM')
+@yield('navmenuSM') --}}
   {{-- @yield('navbare') --}}
 {{-- @include('layouts.app') --}}
 {{-- @include('layout.dashboard.jumbotron')
