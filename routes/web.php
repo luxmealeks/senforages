@@ -14,13 +14,13 @@
 Route::get('/', function () {
     return view('auth.login');
 });
-Route::get('/accueil/', function () {
-    return view('layout.dashboard.default');
-});
+// Route::get('/accueil/', function () {
+//     return view('layout.dashboard.default');
+// });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('default');
+Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/users/', function () {
     return view('layout.users.index');
@@ -36,9 +36,14 @@ Route::get('/villages/list', 'VillageController@list')->name('villages.list');
 Route::resource('villages', 'VillageController');
 
 Route::resource('compteurs', 'CompteurController');
+
 Route::get('/users/list', 'UserController@list')->name('users.list');
 
 Route::resource('users', 'UserController');
+Route::get('/users/', function () {
+    return view('layout.users.index');
+});
+
 Route::resource('factures', 'FactureController');
 
 // Route::get('/compteurs', function () {

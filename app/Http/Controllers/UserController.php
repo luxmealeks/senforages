@@ -32,7 +32,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('layout.users.create', compact('users'));
+        return view('layout.users.create');
     }
 
     /**

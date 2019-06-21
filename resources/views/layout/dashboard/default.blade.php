@@ -2,9 +2,9 @@
 
 <body class="content">
     <div class="wrapper ">
-        <div class="sidebar" data-color="green" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
+        <div class="sidebar" data-color="green" data-background-color="white" data-image="public/assets/img/sidebar-1.jpg">
             <div class="logo">
-                <a href="http://www.creative-tim.com" class="simple-text logo-normal"> SenForage App</a>
+                <a href="./home" class="simple-text logo-normal"> SenForage App</a>
             </div>
             <div class="sidebar-wrapper">
                 @include ('layout.dashboard.sidebar-wrapper')
@@ -16,6 +16,7 @@
             @include ('layout.dashboard.navbar')
 
             <!-- End Navbar -->
+
             <div class="content">
                 <div class="container-fluid">
                     <div class="row">
@@ -77,9 +78,11 @@
                         </div>
 
                         @yield('content')
-                    </div>
                 </div>
             </div>
+
+
+
             <!-- Footer -->
             <footer class="footer">
                 @include ('layout.dashboard.footer')

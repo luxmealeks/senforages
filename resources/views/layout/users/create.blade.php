@@ -1,20 +1,11 @@
-@extends('layout.dashboard.style')
-@include('layout.dashboard.default')
-
-@extends ('layout.dashboard.navbar')
-@include('layout.dashboard.sidebar')
-{{-- @extends('layouts.app') --}}
-
-{{-- @yield('navmenuSM') --}}
-  {{-- @yield('navbare') --}}
-{{-- @extends('layouts.app') --}}
+@extends('layout.dashboard.default')
 
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
-                <div class="card-header">{{ __('Nouveau client') }}</div>
+                <div class="card-header">{{ __('Enregistrement d\'un nouvel utilisateur ') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
