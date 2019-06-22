@@ -2,7 +2,11 @@
 
 <body class="content">
     <div class="wrapper ">
-        <div class="sidebar" data-color="green" data-background-color="white" data-image="public/assets/img/sidebar-1.jpg">
+        <div class="sidebar" data-color="green" data-background-color="white" data-image="{{asset('assets/img/sidebar-3.jpg')}}">
+                    {{-- <div class="sidebar" data-color="green" data-background-color="white" data-image="{{asset('assets/img/sidebar-2.jpg')}}">
+                        <div class="sidebar" data-color="green" data-background-color="white" data-image="{{asset('assets/img/sidebar-3.jpg')}}">
+                                <div class="sidebar" data-color="green" data-background-color="white" data-image="{{asset('assets/img/sidebar-4.jpg')}}"> --}}
+
             <div class="logo">
                 <a href="./home" class="simple-text logo-normal"> SenForage App</a>
             </div>

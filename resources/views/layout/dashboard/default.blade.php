@@ -2,7 +2,8 @@
 
 <body class="content">
     <div class="wrapper ">
-        <div class="sidebar" data-color="green" data-background-color="white" data-image="public/assets/img/sidebar-1.jpg">
+                    <div class="sidebar" data-color="green" data-background-color="white" data-image="{{asset('assets/img/sidebar-1.jpg')}}">
+
             <div class="logo">
                 <a href="./home" class="simple-text logo-normal"> SenForage App</a>
             </div>
@@ -26,7 +27,7 @@
                                     <div class="ct-chart" id="dailySalesChart"></div>
                                 </div>
                                 <div class="card-body">
-                                    <h4 class="card-title">Ajouter village</h4>
+                                    <h4 class="card-title">Stats Factures</h4>
                                     <p class="card-category">
                                         <p class="card-category">Details</p>
                                         <p class="card-category">Demande client</p>
@@ -63,7 +64,7 @@
                                         <div class="ct-chart" id="completedTasksChart"></div>
                                     </div>
                                     <div class="card-body">
-                                        <h4 class="card-title">Chefs de village</h4>
+                                        <h4 class="card-title">Stats abonnés</h4>
                                         <p class="card-category">Details</p>
                                         <p class="card-category">Nombre </p>
 

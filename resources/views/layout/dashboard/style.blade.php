@@ -16,10 +16,10 @@
     <!-- CSS Files -->
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/material-dashboard.css?v=2.1.1')}}" rel="stylesheet" />
     <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/demo/demo.css" rel="stylesheet')}}" />
+    {{-- <link rel="stylesheet" type="text/css" href="{{asset('assets/demo/demo.css" rel="stylesheet')}}" /> --}}
 
 
     <!-- CSS Just yajra datatables-->
-    {{-- <link rel="stylesheet" type="text/css" href="{{asset('assets/DataTables/datatables.min.css')}}> --}}
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/DataTables/datatables.min.css')}}>
 
 </head>

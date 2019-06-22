@@ -20,6 +20,13 @@ class CompteurController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function listfree()
+    {
+        $compteurs = Compteur::doesntHave('abonnement')->get();
+
+        return DataTables::of($compteurs)->make(true);
+    }
+
     public function index()
     {
         $compteurs = Compteur::all()->load(['abonnement.client.user'])->paginate(10);

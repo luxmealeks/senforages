@@ -46,8 +46,16 @@ Route::get('/users/', function () {
 
 Route::resource('factures', 'FactureController');
 
-// Route::get('/compteurs', function () {
-//     return view('layout.compteurs.index');
-// });
+Route::get('/compteurs', function () {
+    return view('layout.compteurs.index');
+});
 Route::get('/consommations/list/{abonnement?}', 'ConsommationController@list')->name('consommations.list');
 Route::resource('consommations', 'ConsommationController');
+
+Route::get('/abonnements', 'AbonnementController@list')->name('abonnements.list');
+Route::resource('abonnements', 'CompteurController');
+// Route::resource('/abonnements', 'AbonnementController');
+
+Route::get('/abonnements/selectcompteur', 'AbonnementController@selectcompteur')->name('abonnements.selectcompteur');
+Route::get('/abonnements/selectclient', 'AbonnementController@selectclient')->name('abonnements.selectclient');
+Route::get('/compteurs/listfree', 'CompteurController@listfree')->name('compteurs.listfree');
