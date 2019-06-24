@@ -6,12 +6,9 @@ class AdministrateursTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
-     *
-     * @return void
      */
     public function run()
     {
-               factory(\App\Administrateur::class, 10)->create();
-
+        factory(\App\Administrateur::class, 40)->create();
     }
 }

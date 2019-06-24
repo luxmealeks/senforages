@@ -30,7 +30,7 @@ class CompteurController extends Controller
     public function index()
     {
         $compteurs = Compteur::all()->load(['abonnement.client.user'])->paginate(10);
-        //  $compteurs=Compteur::all()->paginate(10);
+        //$compteurs=Compteur::all()->paginate(10);
         return view('layout.compteurs.index', compact('compteurs'));
     }
 

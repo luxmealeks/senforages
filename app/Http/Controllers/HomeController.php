@@ -23,4 +23,7 @@ class HomeController extends Controller
 
         // return view('layout.dashboard.home');
     }
+
+    //cptr_Villages= Village::get->count(); compteur des villages;
+    //compact ou peut les
 }

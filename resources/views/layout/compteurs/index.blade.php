@@ -21,7 +21,7 @@
 
 
                   <div class="table-responsive">
-                    <table class="table">
+                    <table class="table" id="table-compteur">
                       <thead class=" text-primary">
                         <th>
                           ID
@@ -36,7 +36,7 @@
                       </thead>
                       <tbody>
 
-                          @foreach ($compteurs as $compteur)
+                          {{-- @foreach ($compteurs as $compteur)
 
 
                         <tr>
@@ -55,11 +55,11 @@
 
 
                         </tr>
-                        @endforeach
+                        @endforeach --}}
                       </tbody>
 
                     </table>
-                    {{ $compteurs->links() }}
+                    {{-- {{ $compteurs->links() }} --}}
                   </div>
                 </div>
               </div>
@@ -73,3 +73,46 @@
 
 
 
+
+      @push('scripts')
+
+  <script type="text/javascript">
+      $(document).ready(function () {
+
+          $('#table-compteur').DataTable( {
+            "processing": true,
+            "serverSide": true,
+            "ajax": "{{route('compteurs.list')}}",
+            columns: [
+                    { data: 'id', name: 'id' },
+                    { data: 'compteur.numero_serie', name: 'compteur.numero_serie' },
+                    { data: null ,orderable: false, searchable: false}
+
+                ],
+                "columnDefs": [
+                        {
+                        "data": null,
+                        "render": function (data, type, row) {
+                        url_e =  "{!! route('compteurs.edit',':id')!!}".replace(':id', data.id);
+                        url_d =  "{!! route('compteurs.destroy',':id')!!}".replace(':id', data.id);
+                        return '<a href='+url_e+'  class=" btn btn-primary " ><i class="material-icons">edit</i></a>'+
+                        '<a class="btn btn-danger" href='+url_d+'><i class="material-icons">delete</i></a>';
+                        },
+                        "targets": 5
+                        },
+                    // {
+                    //     "data": null,
+                    //     "render": function (data, type, row) {
+                    //         url =  "{!! route('users.edit',':id')!!}".replace(':id', data.id);
+                    //         return check_status(data,url);
+                    //     },
+                    //     "targets": 1
+                    // }
+                ],
+
+          });
+      });
+      </script>
+
+
+      @endpush

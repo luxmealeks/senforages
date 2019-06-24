@@ -21,7 +21,7 @@
 
             <!-- End Navbar -->
 
-            <div class="content">
+             <div class="content">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-4">
@@ -30,14 +30,14 @@
                                     <div class="ct-chart" id="dailySalesChart"></div>
                                 </div>
                                 <div class="card-body">
-                                    <h4 class="card-title">Ajouter village</h4>
+                                    <h4 class="card-title">Stats Abonnements</h4>
                                     <p class="card-category">
-                                        <p class="card-category">Details</p>
+                                        <p class="card-category">{{App\Abonnement::count() }}</p>
                                         <p class="card-category">Demande client</p>
                                     </div>
                                     <div class="card-footer">
                                         <div class="stats">
-                                            <i class="material-icons">access_time</i> updated 4 minutes ago
+                                            <i class="material-icons">access_time</i> SenForage
                                         </div>
                                     </div>
                                 </div>
@@ -48,15 +48,15 @@
                                         <div class="ct-chart" id="websiteViewsChart"></div>
                                     </div>
                                     <div class="card-body">
-                                        <h4 class="card-title">Stats villages</h4>
-                                        <p class="card-category">Nombre de villages : </p>
+                                        <h4 class="card-title">Stats Utilisateurs</h4>
+                                        <p class="card-category">{{App\User::count() }}: </p>
                                         <p class="card-category">Details : </p>
 
 
                                     </div>
                                     <div class="card-footer">
                                         <div class="stats">
-                                            <i class="material-icons">access_time</i> campaign sent 2 days ago
+                                            <i class="material-icons">access_time</i> SenForage
                                         </div>
                                     </div>
                                 </div>
@@ -67,14 +67,14 @@
                                         <div class="ct-chart" id="completedTasksChart"></div>
                                     </div>
                                     <div class="card-body">
-                                        <h4 class="card-title">Chefs de village</h4>
-                                        <p class="card-category">Details</p>
-                                        <p class="card-category">Nombre </p>
+                                        <h4 class="card-title">Stats Factures</h4>
+                                        <p class="card-category">Nombre de factures</p>
+                                        <p class="card-category">{{App\Client::count() }} </p>
 
                                     </div>
                                     <div class="card-footer">
                                         <div class="stats">
-                                            <i class="material-icons">access_time</i> campaign sent 2 days ago
+                                            <i class="material-icons">access_time</i> SenForage
                                         </div>
                                     </div>
                                 </div>
@@ -84,16 +84,17 @@
                         <div class="">
                             <div class="card">
                                 <div class="card-header card-header-warning">
-                                    <h4 class="card-title">Employees Stats</h4>
-                                    <p class="card-category">New employees on 15th September, 2016</p>
+                                    <h4 class="card-title">Recouvrements de factures</h4>
+                                    <p class="card-category">Status des factures</p>
                                 </div>
                                 <div class="card-body table-responsive">
                                     <table class="table table-hover">
                                         <thead class="text-warning">
                                             <th>ID</th>
-                                            <th>Name</th>
-                                            <th>Salary</th>
-                                            <th>Country</th>
+                                            <th>Nom client</th>
+                                             <th>Prenom du client</th>
+                                            <th>Montat</th>
+                                            <th>Statut</th>
                                         </thead>
                                         <tbody>
                                             <tr>

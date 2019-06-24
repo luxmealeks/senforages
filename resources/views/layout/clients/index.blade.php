@@ -51,6 +51,13 @@
         </div>
       </div>
       {{-- inserer code du bouton du modale modal-delete-client avec sa class--}}
+      @if (session('message'))
+                   <div class="alert alert-success">
+                       {{ session('message') }}
+                   </div>
+                   @endif
+<meta name="csrf-token" content="{{ csrf_token() }}" />
+
 <div class="modal" id="modal-delete-client" tabindex="-1" role="dialog">
  <form method="POST" action="" id="form-delete-client">
     @csrf
@@ -102,7 +109,7 @@
                         "render": function (data, type, row) {
                         url_e =  "{!! route('clients.edit',':id')!!}".replace(':id', data.id);
                         url_d =  "{!! route('clients.destroy',':id')!!}".replace(':id', data.id);
-                        return '<a href='+url_e+'  class="btn btn-primary" > <i class="material-icons">edit</i></a>'+
+                        return '<a href='+url_e+'  class="btn btn-primary" ><i class="material-icons">edit</i></a>'+
                         '<div class="btn btn-danger delete btn-delete-client" data-href='+url_d+'><i class="material-icons">delete</i></div>';
                         },
                         "targets": 4
@@ -119,9 +126,9 @@
 
           });
           $("#table-clients").off('click', '.btn-delete-client').on('click','.btn-delete-client', function(){
-              $('#modal-delete-client').modal();
              var href=$(this).data('href'); //recuperer le code du bouton et le mettre dans le href
              $('#form-delete-client').attr('action',href);
+               $('#modal-delete-client').modal();
           });
 
       });

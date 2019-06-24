@@ -6,12 +6,9 @@ class CompteursTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
-     *
-     * @return void
      */
     public function run()
     {
-        factory(\App\Compteurs::class, 40)->create();
-
+        factory(\App\Compteur::class, 40)->create();
     }
 }

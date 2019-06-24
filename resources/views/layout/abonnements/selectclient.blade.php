@@ -2,7 +2,6 @@
 @section('content')
     <link rel="stylesheet" type="text/css" href="{{asset('assets/DataTables/datatables.min.css')}}>
 
-
 <div class="content">
         <div class="container-fluid">
           <div class="row">

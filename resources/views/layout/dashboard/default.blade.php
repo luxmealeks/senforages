@@ -27,9 +27,9 @@
                                     <div class="ct-chart" id="dailySalesChart"></div>
                                 </div>
                                 <div class="card-body">
-                                    <h4 class="card-title">Stats Factures</h4>
+                                    <h4 class="card-title">Stats Abonnements</h4>
                                     <p class="card-category">
-                                        <p class="card-category">Details</p>
+                                        <p class="card-category">{{App\Abonnement::count() }}</p>
                                         <p class="card-category">Demande client</p>
                                     </div>
                                     <div class="card-footer">
@@ -45,8 +45,8 @@
                                         <div class="ct-chart" id="websiteViewsChart"></div>
                                     </div>
                                     <div class="card-body">
-                                        <h4 class="card-title">Stats villages</h4>
-                                        <p class="card-category">Nombre de villages : </p>
+                                        <h4 class="card-title">Stats Utilisateurs</h4>
+                                        <p class="card-category">{{App\User::count() }}: </p>
                                         <p class="card-category">Details : </p>
 
 
@@ -65,8 +65,8 @@
                                     </div>
                                     <div class="card-body">
                                         <h4 class="card-title">Stats abonnés</h4>
-                                        <p class="card-category">Details</p>
-                                        <p class="card-category">Nombre </p>
+                                        <p class="card-category">Nombre de factures</p>
+                                        <p class="card-category">{{App\Client::count() }} </p>
 
                                     </div>
                                     <div class="card-footer">

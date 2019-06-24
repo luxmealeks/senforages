@@ -44,7 +44,7 @@
                             </a>
                         </li>
                          <li class="nav-item ">
-                            <a class="nav-link" href="./factures">
+                            <a class="nav-link" href="./reglements">
                                 <i class="material-icons">dehaze</i>
                                 <p>Réglements</p>
                             </a>
@@ -56,7 +56,7 @@
                             </a>
                         </li>
                           <li class="nav-item ">
-                            <a class="nav-link" href="./factures">
+                            <a class="nav-link" href="./parametrage">
                                 <i class="material-icons">dehaze</i>
                                 <p>Paramétrage</p>
                             </a>
