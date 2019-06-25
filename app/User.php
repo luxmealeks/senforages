@@ -3,9 +3,12 @@
  * Created by Reliese Model.
  * Date: Tue, 28 May 2019 17:25:54 +0000.
  */
+
 namespace App;
+
 //use Illuminate\Database\Eloquent\Model as Eloquent;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+
 /**
  * Class User.
  *
@@ -31,8 +34,8 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 //class User extends Eloquent
 class User extends Authenticatable
 {
-use \Illuminate\Database\Eloquent\SoftDeletes;
-use\App\Helpers\UuidForKey;
+    use \Illuminate\Database\Eloquent\SoftDeletes;
+    use\App\Helpers\UuidForKey;
 
     protected $casts = [
         'roles_id' => 'int',
@@ -53,26 +56,50 @@ use\App\Helpers\UuidForKey;
         'password',
         'roles_id',
     ];
+
+    //gestion des acces des utilisateurs avec les middeleware
+
+    public function hasRole($rolename)
+    {
+        return $this->role->name == $rolename;
+    }
+
+    // fin middleware
+    // in_Array()=> permet de recherher si un élément est dans un tableau
+    // $roles=> sera un tableau
+
+    public function hasAnyRoles($roles)
+    {
+        in_array($this->role->ame, $roles);
+    }
+
+    // Fin vérification
+
     public function role()
     {
         return $this->belongsTo(\App\Role::class, 'roles_id');
     }
+
     public function administrateur()
     {
         return $this->hasone(\App\Administrateur::class, 'users_id');
     }
+
     public function agent()
     {
         return $this->hasone(\App\Agent::class, 'users_id');
     }
+
     public function client()
     {
         return $this->hasone(\App\Client::class, 'users_id');
     }
+
     public function comptable()
     {
         return $this->hasone(\App\Comptable::class, 'users_id');
     }
+
     public function gestionnaire()
     {
         return $this->hasone(\App\Gestionnaire::class, 'users_id');

@@ -42,7 +42,7 @@
  <script src="{{asset('assets/js/material-dashboard.js')}}" type="text/javascript"></script>
  <!-- Material Dashboard DEMO methods, don't include it in your project! -->
  {{-- <script src="{{asset('assets/demo/demo.js')}}"></script> --}}
- <script type="text/javascript" src="{{asset('assets/DataTables/datatables.min.js')}}"></script>
+ <script src="{{asset('assets/DataTables/datatables.min.js')}}" type="text/javascript"></script>
 
 <script>
         $(document).ready(function() {

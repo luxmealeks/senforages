@@ -90,7 +90,8 @@ class ClientController extends Controller
 
         $message = 'modifier'.$client->user->name.''.$client->user->firstname.'Edition effectuée';
 
-        return redirect()->route('clients.index')->with(compact('message'));
+        // return redirect()->route('clients.update')->with(compact('message'));
+        return view('layout.clients.update')->with(compact('client', 'user', 'id'));
     }
 
     /**
