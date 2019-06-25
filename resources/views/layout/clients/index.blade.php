@@ -4,6 +4,12 @@
 
 
 <div class="content">
+     @if (session('message'))
+                   <div class="alert alert-success">
+                       {{ session('message') }}
+                   </div>
+                   @endif
+<meta name="csrf-token" content="{{ csrf_token() }}" />
         <div class="container-fluid">
           <div class="row">
             <div class="col-md-12">
@@ -51,12 +57,7 @@
         </div>
       </div>
       {{-- inserer code du bouton du modale modal-delete-client avec sa class--}}
-      @if (session('message'))
-                   <div class="alert alert-success">
-                       {{ session('message') }}
-                   </div>
-                   @endif
-<meta name="csrf-token" content="{{ csrf_token() }}" />
+
 
 <div class="modal" id="modal-delete-client" tabindex="-1" role="dialog">
  <form method="POST" action="" id="form-delete-client">

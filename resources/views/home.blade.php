@@ -71,6 +71,7 @@
                                         <p class="card-category">Nombre de factures</p>
                                         <p class="card-category">{{App\Client::count() }} </p>
 
+
                                     </div>
                                     <div class="card-footer">
                                         <div class="stats">

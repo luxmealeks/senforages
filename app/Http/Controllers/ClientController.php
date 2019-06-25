@@ -81,8 +81,16 @@ class ClientController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function edit(Client $client)
+    public function edit($id)
     {
+        $client = Client::find($id);
+        $user = $client->user;
+
+        return $user; //on le fait pour tester ce qu'il retourne.
+
+        $message = 'modifier'.$client->user->name.''.$client->user->firstname.'Edition effectuée';
+
+        return redirect()->route('clients.index')->with(compact('message'));
     }
 
     /**
@@ -104,8 +112,10 @@ class ClientController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Client $client)
+    // public function destroy(Client $client)
+    public function destroy($id)
     {
+        $client = Client::find($id);
         $client->delete();
         $message = $client->user->firstname.' '.$client->user->name.' a été supprimé(e)';
 

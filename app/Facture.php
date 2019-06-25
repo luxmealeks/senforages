@@ -59,6 +59,8 @@ class Facture extends Eloquent
         return $this->hasMany(\App\Reglement::class, 'factures_id');
     }
 
+    //fonction pour générer les Accessors & Mutators qui facilitent la création ici d'utilisteur pour facture.
+
     public function getUserAttribute()
     {
         return $this->consommations->first()->compteur->abonnement->client->user;

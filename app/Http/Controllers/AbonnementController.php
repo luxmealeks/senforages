@@ -15,7 +15,7 @@ class AbonnementController extends Controller
      */
     public function index()
     {
-        return view('abonnements.index');
+        return view('layout.abonnements.index');
     }
 
     public function list()

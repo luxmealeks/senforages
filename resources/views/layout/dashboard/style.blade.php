@@ -22,4 +22,7 @@
     <!-- CSS Just yajra datatables-->
     <link rel="stylesheet" type="text/css" href="{{asset('assets/DataTables/datatables.min.css')}}>
 
+
+
+
 </head>
