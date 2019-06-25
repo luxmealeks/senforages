@@ -1,5 +1,6 @@
 
             <ul class="nav">
+                {{-- @roles('Administrateur') --}}
                         <li class="nav-item active  ">
                             <a class="nav-link" href="./home">
                                 <i class="material-icons">dashboard</i>
@@ -25,6 +26,7 @@
                                 <p>Clients</p>
                             </a>
                         </li>
+                        {{-- @endroles --}}
                         <li class="nav-item ">
                             <a class="nav-link" href="./abonnements">
                                 <i class="material-icons">ac_unit</i>

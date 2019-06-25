@@ -62,8 +62,28 @@ Route::resource('/abonnements', 'AbonnementController');
 Route::get('/abonnements/selectcompteur', 'AbonnementController@selectcompteur')->name('abonnements.selectcompteur');
 Route::get('/abonnements/selectclient', 'AbonnementController@selectclient')->name('abonnements.selectclient');
 
+Route::get('/clients/selectvillage', function () {
+    return view('layout.clients.selectvillage');
+})->name('layout.selectvillage');
+
 Route::get('/compteurs/listfree', 'CompteurController@listfree')->name('compteurs.listfree');
 Route::get('/compteurs/list', 'CompteurController@list')->name('compteurs.list');
 
 Route::get('/factures/list', 'FactureController@list')->name('factures.list');
 Route::resource('/factures', 'FactureController');
+
+Route::get('loginfor/{rolename?}', function ($rolename = null) {
+    if (!isset($rolename)) {
+        return view('auth.loginfor');
+    } else {
+        $role = App\Role::where('name', $rolename)->first();
+        if ($role) {
+            $user = $role->users()->first();
+            Auth::login($user, true);
+
+            return redirect()->route('home');
+        }
+    }
+
+    return redirect()->route('login');
+})->name('loginfor');

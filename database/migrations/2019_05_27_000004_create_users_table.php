@@ -7,16 +7,16 @@ use Illuminate\Database\Migrations\Migration;
 class CreateUsersTable extends Migration
 {
     /**
-     * Schema table name to migrate
+     * Schema table name to migrate.
+     *
      * @var string
      */
     public $tableName = 'users';
 
     /**
      * Run the migrations.
-     * @table users
      *
-     * @return void
+     * @table users
      */
     public function up()
     {
@@ -30,14 +30,16 @@ class CreateUsersTable extends Migration
             $table->string('email', 200)->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password')->nullable();
+            //garder la session dans les cookies
+            $table->rememberToken();
+            //fin cookies ajout
             $table->unsignedInteger('roles_id')->nullable();
 
-            $table->index(["roles_id"], 'fk_users_roles1_idx');
+            $table->index(['roles_id'], 'fk_users_roles1_idx');
 
-            $table->unique(["email"], 'email_UNIQUE');
+            $table->unique(['email'], 'email_UNIQUE');
             $table->softDeletes();
             $table->nullableTimestamps();
-
 
             $table->foreign('roles_id', 'fk_users_roles1_idx')
                 ->references('id')->on('roles')
@@ -48,11 +50,9 @@ class CreateUsersTable extends Migration
 
     /**
      * Reverse the migrations.
-     *
-     * @return void
      */
-     public function down()
-     {
-       Schema::dropIfExists($this->tableName);
-     }
+    public function down()
+    {
+        Schema::dropIfExists($this->tableName);
+    }
 }

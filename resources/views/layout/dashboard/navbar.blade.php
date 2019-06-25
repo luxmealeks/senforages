@@ -1,3 +1,6 @@
+{{-- @extends('layout.dashboard.default');
+@extends('content') --}}
+
 <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
         <div class="container-fluid">
 
@@ -12,7 +15,7 @@
                     <div class="input-group no-border">
                         <input type="text" value="" class="form-control" placeholder="Search...">
                         <button type="submit" class="btn btn-white btn-round btn-just-icon">
-            <i class="material-icons">search</i>
+            <i class="material-icons">rechercher</i>
             <div class="ripple-container"></div>
         </button>
                     </div>
@@ -27,26 +30,26 @@
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link" href="./" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="material-icons">notifications</i>
                             <span class="notification">5</span>
                             <p class="d-lg-none d-md-block">
                                 Some Actions
                             </p>
                         </a>
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                        {{-- <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="#">Mike John responded to your email</a>
                             <a class="dropdown-item" href="#">You have 5 new tasks</a>
                             <a class="dropdown-item" href="#">You're now friend with Andrew</a>
                             <a class="dropdown-item" href="#">Another Notification</a>
                             <a class="dropdown-item" href="#">Another One</a>
-                        </div>
+                        </div> --}}
                     </li>
 
                        <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                                                        {{ Auth::user()->firstname }} <span class="caret"></span>
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="./" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }}<span class="caret"></span>
+                               {{-- {{ Auth::user()->firstname }} <span class="caret"></span> --}}
 
                                 </a>
 
@@ -54,7 +57,7 @@
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                        {{ __('Se déconnecter') }}
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
