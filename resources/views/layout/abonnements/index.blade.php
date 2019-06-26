@@ -1,6 +1,7 @@
-@extends ('layout.dashboard.default')
+@extends('layout.dashboard.default')
 @section('content')
-    {{-- <link rel="stylesheet" type="text/css" href="{{asset('assets/DataTables/datatables.min.css')}}> --}}
+
+
 <div class="content">
         <div class="container-fluid">
           <div class="row">
@@ -108,11 +109,8 @@
                         {
                         "data": null,
                         "render": function (data, type, row) {
-                        url_e =  "{!! route('abonnements.edit',':id')!!}".replace(':id', data.id);
-                        url_d =  "{!! route('abonnements.destroy',':id')!!}".replace(':id', data.id);
-                        return '<a href='+url_e+'  class="btn btn-primary" ><i class="material-icons">edit</i></a>'+
-                        '<div class="btn btn-danger delete btn-delete-client" data-href='+url_d+'><i class="material-icons">delete</i></div>';
-
+                        url_e =  "{!! route('abonnements.show',':id')!!}".replace(':id', data.id);
+                        return '<a href='+url_e+'  class=" btn btn-primary " ><i class="material-icons">edit</i></a>';
                         },
                         "targets": 5
                         },

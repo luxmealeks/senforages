@@ -31,14 +31,14 @@ class AbonnementController extends Controller
     // }
     public function selectclient()
     {
-        return view('abonnements.selectclient');
+        return view('layout.abonnements.selectclient');
     }
 
     public function selectcompteur(Request $request)
     {
         $client = \App\Client::find($request->input('client'));
 
-        return view('abonnements.selectcompteur', compact('client'));
+        return view('layout.abonnements.selectcompteur', compact('client'));
     }
 
     /**
@@ -51,7 +51,7 @@ class AbonnementController extends Controller
         $client = \App\Client::find($request->input('client'))->load('user');
         $compteur = \App\Compteur::find($request->input('compteur'));
 
-        return view('abonnements.create', compact(['client', 'compteur']));
+        return view('layout.abonnements.create', compact(['client', 'compteur']));
     }
 
     /**

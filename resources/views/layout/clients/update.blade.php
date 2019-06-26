@@ -26,7 +26,7 @@
 
                     <div class="form-group">
                         <label for="input-nom">Nom</label>
-                        <input type="text" name="nom" class="form-control" id="input-nom" aria-describedby="emailHelp" placeholder="Nom du client" value={{"$user->email")>
+                        <input type="text" name="nom" class="form-control" id="input-nom" aria-describedby="emailHelp" placeholder="Nom du client" value={{"$user->email"}})>
                         <small id="input-nom-help" class="form-text text-muted">
                             @if ($errors->has('nom'))
                             <div class="alert alert-danger">

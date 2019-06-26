@@ -79,15 +79,17 @@ class ClientController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
+     // public function edit(Client $client)
     {
         $client = Client::find($id);
         $user = $client->user;
 
-        return $user; //on le fait pour tester ce qu'il retourne.
+        // return $user; //on le fait pour tester ce qu'il retourne.
 
         $message = 'modifier'.$client->user->name.''.$client->user->firstname.'Edition effectuée';
 
-        // return redirect()->route('clients.update')->with(compact('message'));
+        // return redirect()->route('clients.edit')->with(compact('message'));
+
         return view('layout.clients.update')->with(compact('client', 'user', 'id'));
     }
 

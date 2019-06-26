@@ -16,30 +16,30 @@
                     </div>
                     <div class="clearfix"></div>
                 </a>
-            </li>
+            {{-- </li>
             <li class="header-title">Images</li>
             <li class="active">
                 <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../assets/img/sidebar-1.jpg" alt="">
+                    <img src="{{asset('/assets/img/sidebar-1.jpg" alt="">
+                </a>
+            </li>
+            <li>
+                <a class="img-holder switch-trigger" href="javascript:void(0)')}}" >
+                    <img src="{{asset('/assets/img/sidebar-2.jpg')}}"  alt="">
                 </a>
             </li>
             <li>
                 <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../assets/img/sidebar-2.jpg" alt="">
+                    <img src="{{asset('/assets/img/sidebar-3.jpg')}}"  alt="">
                 </a>
             </li>
             <li>
                 <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../assets/img/sidebar-3.jpg" alt="">
+                    <img src="{{asset('/assets/img/sidebar-4.jpg')}}"  alt="">
                 </a>
-            </li>
-            <li>
-                <a class="img-holder switch-trigger" href="javascript:void(0)">
-                    <img src="../assets/img/sidebar-4.jpg" alt="">
-                </a>
-            </li>
+            </li> --}}
             <li class="button-container">
-                <a href="https://www.creative-tim.com/product/material-dashboard" target="_blank" class="btn btn-primary btn-block">Free Download</a>
+                {{-- <a href="https://www.creative-tim.com/product/material-dashboard" target="_blank" class="btn btn-primary btn-block">Free Download</a> --}}
             </li>
             <!-- <li class="header-title">Want more components?</li>
         <li class="button-container">
@@ -48,13 +48,13 @@
             </a>
         </li> -->
             <li class="button-container">
-                <a href="https://demos.creative-tim.com/material-dashboard/docs/2.1/getting-started/introduction.html" target="_blank" class="btn btn-default btn-block">
+                {{-- <a href="https://demos.creative-tim.com/material-dashboard/docs/2.1/getting-started/introduction.html" target="_blank" class="btn btn-default btn-block"> --}}
         View Documentation
       </a>
             </li>
-            <li class="button-container github-star">
+            {{-- <li class="button-container github-star">
                 <a class="github-button" href="https://github.com/creativetimofficial/material-dashboard" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star ntkme/github-buttons on GitHub">Star</a>
-            </li>
+            </li> --}}
             <li class="header-title">Thank you for 95 shares!</li>
             <li class="button-container text-center">
                 <button id="twitter" class="btn btn-round btn-twitter"><i class="fa fa-twitter"></i> &middot; 45</button>

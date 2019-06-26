@@ -2,7 +2,7 @@
 {{-- @extends('layouts.app') --}}
 
 @section('content')
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/DataTables/datatables.min.css')}}>
+    {{-- <link rel="stylesheet" type="text/css" href="{{asset('assets/DataTables/datatables.min.css')}}> --}}
 
 
 <div class="content">
@@ -29,33 +29,15 @@
                         <th>
                           Numero de série
                         </th>
-                         <th>
+                         {{-- <th>
+                          Administrateur
+                          </th> --}}
+                          <th>
                           Action
                           </th>
 
                       </thead>
                       <tbody>
-
-                          {{-- @foreach ($compteurs as $compteur)
-
-
-                        <tr>
-                          <td>
-                            {{$compteur->id}}
-                          </td>
-                          <td>
-                            {{$compteur->numero_serie}}<br>
-                          </td>
-
-                          <td>
-                              <a class="btn btn-primary" href={{route('compteurs.show',['compteur'=>$compteur->id])}}><i class="material-icons">edit</i> </a>
-                              <a class="btn btn-primary" href={{route('compteurs.show',['compteur'=>$compteur->id])}}><i class="material-icons">delete</i> </a>
-
-                          </td>
-
-
-                        </tr>
-                        @endforeach --}}
                       </tbody>
 
                     </table>
@@ -71,9 +53,6 @@
       </div>
       @endsection
 
-
-
-
       @push('scripts')
 
   <script type="text/javascript">
@@ -85,7 +64,10 @@
             "ajax": "{{route('compteurs.list')}}",
             columns: [
                     { data: 'id', name: 'id' },
-                    { data: 'compteur.numero_serie', name: 'compteur.numero_serie' },
+                    { data: 'numero_serie', name: 'numero_serie' },
+                    // { data: 'user.name', name: 'user.name' },
+                    // { data: 'user.firstname', name: 'user.firstname' }
+                     // { data: 'administrateur.matricule', name: 'administrateur.matricule' },
                     { data: null ,orderable: false, searchable: false}
 
                 ],
@@ -98,7 +80,7 @@
                         return '<a href='+url_e+'  class=" btn btn-primary " ><i class="material-icons">edit</i></a>'+
                         '<a class="btn btn-danger" href='+url_d+'><i class="material-icons">delete</i></a>';
                         },
-                        "targets": 5
+                        "targets": 2
                         },
                     // {
                     //     "data": null,
