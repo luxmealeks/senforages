@@ -104,7 +104,7 @@ Route::get('loginfor/{rolename?}', function ($rolename = null) {
     return redirect()->route('login');
 })->name('loginfor');
 
-Route::get('/reglements/list', 'ReglementController@list')->name('reglements.list');
+Route::get('/reglements/list/{type?}', 'ReglementController@list')->name('reglements.list');
 Route::get('reglements', function () {
     return view('layout.reglements.index');
 });

@@ -68,22 +68,26 @@ class Compteur extends Eloquent
     //génération de facture.
     public function generateFacture()
     {
-        $nouvelle_cons = $this->getNouvelleConsommationAttribute();
+        $nouvelles_conso = $this->getNouvelleConsommationAttribute();
         //on peut faire un filtre sur la génération de factures si l'agent a au moins une facture
-        if ($nouvelle_cons->count() > 0) {
-            $facture = new\Facture(); //creer une facture
+        if ($nouvelles_conso->count() > 0) {
+            $facture = new\App\Facture(); //creer une facture
             $facture->details = 'generate auto...'; // pour mettre les details:
             //Ici on parcours les consommations
             $valeur = 0;
-            foreach ($nouvelle_conso as $conso) {
-                $valeur = $valeur + $conso->valeur; //affectation des cons
+            foreach ($nouvelles_conso as $conso) {
+                // $valeur = $valeur + $conso->valeur; //affectation des cons
+                $valeur += $conso->valeur;
             }//fin parcours
             $facture->$valeur_totale_consommee = $valeur; //enregistrement de la valeur
             $facture->montant = $valeur * 3; //calcul de la valeur totale
 
             $facture->save(); //enregistrer facture
-            $facture->saveMany($nouvelle_cons); //enregistrer toutes les factures avec les mises à jour
-       return $facture;
+            $facture->consommations()->saveMany($nouvelles_conso); //enregistrer toutes les factures des consommations
+
+            // $facture->saveMany($nouvelles_conso); //enregistrer toutes les factures avec les mises à jour
+
+            return $facture;
         }
 
         return null;
