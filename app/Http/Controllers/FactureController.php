@@ -10,12 +10,12 @@ class FactureController extends Controller
 {
     // générer des fac(ures sur la page d'acceuil.
 
-    public function stats(Request $request)
-    {
-        $cptr = Consommations::doesntHave('facture')->count();
+    // public function stats(Request $request)
+    // {
+    //     $cptr = Consommations::doesntHave('facture')->count();
 
-        return Datatables::of($cptr)->make(true);
-    }
+    //     return Datatables::of($cptr)->make(true);
+    // }
 
     // fin génération de stats
 

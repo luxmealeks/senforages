@@ -81,7 +81,6 @@ Route::resource('clients', 'ClientController');
 Route::get('compteurs', function () {
     return view('layout.compteurs.index');
 });
-
 Route::get('/compteurs/listfree', 'CompteurController@listfree')->name('compteurs.listfree');
 Route::get('/compteurs/list', 'CompteurController@list')->name('compteurs.list');
 Route::resource('compteurs', 'CompteurController');
@@ -104,3 +103,9 @@ Route::get('loginfor/{rolename?}', function ($rolename = null) {
 
     return redirect()->route('login');
 })->name('loginfor');
+
+Route::get('/reglements/list', 'ReglementController@list')->name('reglements.list');
+Route::get('reglements', function () {
+    return view('layout.reglements.index');
+});
+Route::resource('reglements', 'ReglementController');

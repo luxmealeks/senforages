@@ -9,6 +9,6 @@ class ConsommationsTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Consommation::class, 10)->create();
+        factory(App\Consommation::class, 100)->create(['factures_id' => null]); //creation de consommations
     }
 }

@@ -1,7 +1,6 @@
 @extends ('layout.dashboard.default')
 @section('content')
-    {{-- <link rel="stylesheet" type="text/css" href="{{asset('assets/DataTables/datatables.min.css')}}> --}}
-
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/DataTables/datatables.min.css')}}>
 
 <div class="content">
         <div class="container-fluid">
@@ -10,35 +9,33 @@
               <div class="card">
                 <div class="card-header card-header-primary">
                   <h4 class="card-title ">SENFORAGE</h4>
-                  <p class="card-category"> Factures
-                      <a href="{{route('factures.create')}}"><div class="btn btn-warning">Nouvelle Facture <i class="material-icons">add</i></div></a>
+                  <p class="card-category"> Reglements des reglements
+                      <a href="{{route('reglements.create')}}"><div class="btn btn-warning">Nouveau Reglement <i class="material-icons">add</i></div></a>
                   </p>
                 </div>
                 <div class="card-body">
                   <div class="table-responsive">
-                    <table class="table" id="table-factures">
+                    <table class="table" id="table-reglements">
                       <thead class=" text-primary">
                         <th>
                           ID
                         </th>
-                        <th>
-                          Date limite de paiement
+                         <th>
+                         Date de réglement
                         </th>
                         <th>
-                          Date  Debut de consommation
+                        Type
                         </th>
                         <th>
-                         Date Fin de consommation
+                          Montant
                         </th>
-                        <th>
-                          montant
-                          </th>
-                          <th>
+
+                          {{-- <th>
                           Prenom du client
                           </th>
                           <th>
                           Nom du client
-                          </th>
+                          </th> --}}
                           <th>
                           Action
                           </th>
@@ -100,36 +97,38 @@
 <script type="text/javascript">
       $(document).ready(function () {
 
-          $('#table-factures').DataTable( {
+          $('#table-reglements').DataTable( {
             "processing": true,
             "serverSide": true,
-            "ajax": "{{route('factures.list')}}",
+            "ajax": "{{route('reglements.list')}}",
             columns: [
                     { data: 'id', name: 'id' },
-                    { data: 'date_limite', name: 'date_limite' },
-                    { data: 'debut_consommation', name: 'debut_consommation' },
-                    { data: 'fin_consommation', name: 'fin_consommation' },
-                    { data: 'montant', name: 'montant' },
-                    { data: 'user.name', name: 'user.name' },
-                    { data: 'user.firstname', name: 'user.firstname' },
-                    { data: null ,orderable: false, searchable: false}
+                    { data: 'date', name: 'date' },
+                    { data: 'type.name', name: 'type.name' },
+                    { data: 'facture.montant', name: 'facture.montant' },
+
+                    // { data: 'facture.date', name: 'facture.date' },
+                    // { data: 'comptable.user.name', name: 'comptable.user.name' },
+                    // { data: 'user.firstname', name: 'user.firstname' },
+
+             { data: null ,orderable: false, searchable: false}
 
                 ],
                 "columnDefs": [
                         {
                         "data": null,
                         "render": function (data, type, row) {
-                        url_e =  "{!! route('factures.edit',':id')!!}".replace(':id', data.id);
-                        url_d =  "{!! route('factures.destroy',':id')!!}".replace(':id', data.id);
+                        url_e =  "{!! route('reglements.edit',':id')!!}".replace(':id', data.id);
+                        url_d =  "{!! route('reglements.destroy',':id')!!}".replace(':id', data.id);
                         return '<a href='+url_e+'  class="btn btn-primary" ><i class="material-icons">edit</i></a>'+
                         '<div class="btn btn-danger delete btn-delete-client" data-href='+url_d+'><i class="material-icons">delete</i></div>';
                         },
-                        "targets": 7
+                        "targets": 4
                         },
                     // {
                     //     "data": null,
                     //     "render": function (data, type, row) {
-                    //         url =  "{!! route('factures.edit',':id')!!}".replace(':id', data.id);
+                    //         url =  "{!! route('reglements.edit',':id')!!}".replace(':id', data.id);
                     //         return check_status(data,url);
                     //     },
                     //     "targets": 1
@@ -137,7 +136,7 @@
                 ],
 
           });
-          $("#table-factures").off('click', '.btn-delete-client').on('click','.btn-delete-client', function(){
+          $("#table-reglements").off('click', '.btn-delete-client').on('click','.btn-delete-client', function(){
              var href=$(this).data('href'); //recuperer le code du bouton et le mettre dans le href
              $('#form-delete-client').attr('action',href);
                $('#modal-delete-client').modal();

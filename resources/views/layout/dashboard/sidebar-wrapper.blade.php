@@ -1,13 +1,18 @@
 
             <ul class="nav">
-                {{-- @roles('Administrateur') --}}
+                {{-- @Roles('Administrateur') --}}
                         <li class="nav-item active  ">
                             <a class="nav-link" href="./home">
                                 <i class="material-icons">dashboard</i>
                                 <p>Dashboard</p>
                             </a>
                         </li>
-
+                        <li class="nav-item ">
+                            <a class="nav-link" href="./parametrage">
+                                <i class="material-icons">dehaze</i>
+                                <p>Paramétrage</p>
+                            </a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./users">
                                 <i class="material-icons">people</i>
@@ -57,11 +62,6 @@
                                 <p>Factures</p>
                             </a>
                         </li>
-                          <li class="nav-item ">
-                            <a class="nav-link" href="./parametrage">
-                                <i class="material-icons">dehaze</i>
-                                <p>Paramétrage</p>
-                            </a>
-                        </li>
+
             </ul>
 

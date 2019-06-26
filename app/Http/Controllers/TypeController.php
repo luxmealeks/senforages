@@ -2,19 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Reglement;
+use App\Type;
 use Illuminate\Http\Request;
-use Yajra\Datatables\Datatables;
 
-class ReglementController extends Controller
+class TypeController extends Controller
 {
-    public function list(Request $request)
-    {
-        $reglement = Reglement::with('type')->get();
-        // $reglement = Reglement::get();
-        return Datatables::of($reglement)->make(true);
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -22,7 +14,7 @@ class ReglementController extends Controller
      */
     public function index()
     {
-        return view('layout.reglements.index');
+        //
     }
 
     /**
@@ -32,61 +24,62 @@ class ReglementController extends Controller
      */
     public function create()
     {
+        //
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param \Illuminate\Http\Request $request
-     *
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param \App\Reglement $reglement
-     *
+     * @param  \App\Type  $type
      * @return \Illuminate\Http\Response
      */
-    public function show(Reglement $reglement)
+    public function show(Type $type)
     {
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param \App\Reglement $reglement
-     *
+     * @param  \App\Type  $type
      * @return \Illuminate\Http\Response
      */
-    public function edit(Reglement $reglement)
+    public function edit(Type $type)
     {
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param \Illuminate\Http\Request $request
-     * @param \App\Reglement           $reglement
-     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Type  $type
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Reglement $reglement)
+    public function update(Request $request, Type $type)
     {
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param \App\Reglement $reglement
-     *
+     * @param  \App\Type  $type
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Reglement $reglement)
+    public function destroy(Type $type)
     {
+        //
     }
 }

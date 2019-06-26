@@ -6,11 +6,9 @@ class ReglementsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
-     *
-     * @return void
      */
     public function run()
     {
-        //
+        factory(\App\Reglement::class, 40)->create();
     }
 }

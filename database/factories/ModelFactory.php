@@ -72,7 +72,9 @@ $factory->define(App\Consommation::class, function (Faker\Generator $faker) {
     return [
         'uuid' => $faker->uuid,
         'date' => $faker->dateTimeBetween($startDate = '-10 month', $endDate = 'now', $timezone = null),
-        'valeur' => $faker->word,
+        // 'valeur' => $faker->word,
+        'valeur' => $fakerrandomNumber($nbDigit = 5),
+
         'compteurs_id' => function () use ($id_compteur) {
             return $id_compteur;
         },
