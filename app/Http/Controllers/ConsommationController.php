@@ -12,21 +12,34 @@ class ConsommationController extends Controller
     public function list(Abonnement $abonnement = null)
     {
         if ($abonnement == null) {
-            $consommation = Consommation::get()->load('compteur.abonnement.client.user');
+            $consommations = \App\Consommation::with('compteur.abonnement.client.user')->get();
 
-            // return $consommation->count();
-
-            return Datatables::of($consommation)->make(true);
+            return DataTables::of($consommations)->make(true);
         } else {
-            $compteur = $abonnement->compteur;
-            $consommation = $compteur->consommations;
-            $consommation->load('compteur.abonnement.client.user');
+            $consommations = $abonnement->compteur->consommations->load('compteur.abonnement.client.user');
 
-            // return $consommation->count();
-
-            return Datatables::of($consommation);
+            return DataTables::of($consommations)->make(true);
         }
     }
+
+    // public function list(Abonnement $abonnement = null)
+    // {
+    //     if ($abonnement == null) {
+    //         $consommation = Consommation::get()->load('compteur.abonnement.client.user');
+
+    //         // return $consommation->count();
+
+    //         return Datatables::of($consommation)->make(true);
+    //     } else {
+    //         $compteur = $abonnement->compteur;
+    //         $consommation = $compteur->consommations;
+    //         $consommation->load('compteur.abonnement.client.user');
+
+    //         // return $consommation->count();
+
+    //         return Datatables::of($consommation);
+    //     }
+    // }
 
     /**
      * Display a listing of the resource.

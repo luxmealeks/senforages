@@ -1,0 +1,15 @@
+CREER SES PROPRES COMMANDES ARTISAN
+php artisan commande:option argument
+
+faire une commande artisan pour la génération des factures
+exemple :
+    php artisan make:commande GenerateFactures;
+
+la signature est un element important
+exmp
+'route:list'
+
+sur les commandes artisan on peut emettre des messages d'information à mettre dans la fontion handle
+
+packages pour installer l'application :
+pour se faire, creer un nouveau controller pour lancer l'installation 
