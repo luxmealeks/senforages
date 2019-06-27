@@ -115,6 +115,7 @@
                         },
                         "targets": 4
                         },
+
                     // {
                     //     "data": null,
                     //     "render": function (data, type, row) {
@@ -124,6 +125,12 @@
                     //     "targets": 1
                     // }
                 ],
+                 dom: 'lBfrtip',
+        buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+        ],
+          "lengthMenu": [ 10, 25, 50, 75, 100 ]
+
 
           });
           $("#table-clients").off('click', '.btn-delete-client').on('click','.btn-delete-client', function(){

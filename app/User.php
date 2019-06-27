@@ -57,24 +57,6 @@ class User extends Authenticatable
         'roles_id',
     ];
 
-    //gestion des acces des utilisateurs avec les middeleware
-
-    public function hasRole($rolename)
-    {
-        return $this->role->name == $rolename;
-    }
-
-    // fin middleware
-    // in_Array()=> permet de recherher si un élément est dans un tableau
-    // $roles=> sera un tableau
-
-    public function hasAnyRoles($roles)
-    {
-        in_array($this->role->ame, $roles);
-    }
-
-    // Fin vérification
-
     public function role()
     {
         return $this->belongsTo(\App\Role::class, 'roles_id');
@@ -104,4 +86,22 @@ class User extends Authenticatable
     {
         return $this->hasone(\App\Gestionnaire::class, 'users_id');
     }
+
+    //gestion des acces des utilisateurs avec les middeleware
+
+    public function hasRole($rolename)
+    {
+        return $this->role->name == $rolename;
+    }
+
+    // fin middleware
+    // in_Array()=> permet de recherher si un élément est dans un tableau
+    // $roles=> sera un tableau
+
+    public function hasAnyRoles($roles)
+    {
+        in_array($this->role->ame, $roles);
+    }
+
+    // Fin vérification
 }

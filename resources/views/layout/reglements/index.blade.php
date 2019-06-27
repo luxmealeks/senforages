@@ -104,7 +104,7 @@
             columns: [
                     { data: 'id', name: 'id' },
                     { data: 'date', name: 'date' },
-                    { data: 'type.name', name: 'type.name' },
+                    // { data: 'type.name', name: 'type.name' },
                     // { data: 'facture.montant', name: 'facture.montant' },
 
                     // { data: 'facture.date', name: 'facture.date' },
@@ -134,6 +134,12 @@
                     //     "targets": 1
                     // }
                 ],
+                dom: 'lBfrtip',
+                buttons: [
+                'copy', 'csv', 'excel', 'pdf', 'print'
+                ],
+                "lengthMenu": [ 10, 25, 50, 75, 100 ]
+
 
           });
           $("#table-reglements").off('click', '.btn-delete-client').on('click','.btn-delete-client', function(){

@@ -20,6 +20,7 @@ class CheckRoles
         //     // Redirect...
         $this->middleware('roles:Administrateur' | 'Gestionnaire' | 'Client' | 'Agent');
         $roleArray = explode('|', $roles);
+
         if (!$request->user()->hasAnyRoles($roleArray)) {
             return redirect()->route('home')->with(['permission' => 'Action non autorisée']);
         }

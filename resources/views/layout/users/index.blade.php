@@ -133,7 +133,28 @@
                     // }
                 ],
 
+ dom: 'lBfrtip',
+        buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+        ],
+          "lengthMenu": [ 10, 25, 50, 75, 100 ]
+
+
+        //   {
+        //         extend: 'pdfHtml5',
+        //         exportOptions: {
+        //             columns: [ 0, 1, 2, 5 ]
+        //         }
+        //     },
+        //     'colvis' pour masquer une colonne
+
           });
+        //   $("#tableusers").off('click', '.btn-delete-client').on('click','.btn-delete-client', function(){
+        //      var href=$(this).data('href'); //recuperer le code du bouton et le mettre dans le href
+        //      $('#form-delete-client').attr('action',href);
+        //        $('#modal-delete-client').modal();
+        //   });
+
       });
       </script>
 

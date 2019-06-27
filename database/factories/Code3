@@ -1,28 +1,39 @@
 
-1. creer une facture
-    ($facture=new\Facture;)
-    pour mettre les details:
-        $facture->details="generateauto.";
-            $facture->save();
+//gestion des acces selon les roles
 
-2. affectation des consommations
-
-//Ici on parcours les consommations
-    $valeur=0;
-    foreach($nouvelle_conso as $conso){
-        $valeur=$valeur+$conso->valeur;
-        oubien
-        $valeur+=$conso->valeur;
-    }
-    $facture->$valeur_totale_consommee=$valeur; //enregistrement de la valeur
-    $facture->montant=$valeur*3;
+public function hasRole ($rolename){
+    return $this->role->name==$rolename
+LES MIDDELWARE
 
 
-3. affectation client
+$user=User::first();
+$user->role->name;
+if($user->hasRole('Administrateur'){
+    ech "Ok"
+}
 
-4. calcul du montant
+)
 
-5. calcul de la valeur totale
+in_Array()=> permet de recherher si un élément est dans un tableau
+$roles=> sera un tableau
+
+public function hasAnyRoles($roles){
+    in_Array($this->role->ame, $roles);
+}
+
+php artisan make:middleware CheckRoles : permet de creer le middleware
+
+$this->middleware('roles:Administrateur'BARRE VERTICALE'GESTIONNAIRE
+$roleArray = explode("bv",$roles);
+if (!$request()->user()->hasAnyRoles($roleArray){
+    return redirec()->route('home')->with['permission'=>"Action non autorisée"];
+
+}
+)
 
 
-nano/config/snappy.php
+
+dans view/auth/login.blade.php et mettre le fichier de template de test
+
+
+
