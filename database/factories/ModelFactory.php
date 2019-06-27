@@ -186,8 +186,8 @@ $factory->define(App\Comptable::class, function (Faker\Generator $faker) {
 // });
 $factory->define(App\User::class, function (Faker\Generator $faker) {
     return [
-        'firstname' => SnmG::getFirstName(),
         'name' => SnmG::getName(),
+        'firstname' => SnmG::getFirstName(),
         'telephone' => $faker->phoneNumber,
         'email' => Str::random(5).'.'.$faker->safeEmail,
         'email_verified_at' => $faker->dateTimeBetween(),

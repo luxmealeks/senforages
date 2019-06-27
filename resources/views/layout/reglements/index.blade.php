@@ -105,7 +105,7 @@
                     { data: 'id', name: 'id' },
                     { data: 'date', name: 'date' },
                     { data: 'type.name', name: 'type.name' },
-                    { data: 'facture.montant', name: 'facture.montant' },
+                    // { data: 'facture.montant', name: 'facture.montant' },
 
                     // { data: 'facture.date', name: 'facture.date' },
                     // { data: 'comptable.user.name', name: 'comptable.user.name' },
@@ -123,7 +123,7 @@
                         return '<a href='+url_e+'  class="btn btn-primary" ><i class="material-icons">edit</i></a>'+
                         '<div class="btn btn-danger delete btn-delete-client" data-href='+url_d+'><i class="material-icons">delete</i></div>';
                         },
-                        "targets": 4
+                        "targets": 3
                         },
                     // {
                     //     "data": null,
