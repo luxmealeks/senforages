@@ -45,6 +45,7 @@ class Facture extends Eloquent
         'date_limite',
         'details',
         'montant',
+        'valeur_totale_consommee',
         'debut_consommation',
         'fin_consommation',
     ];

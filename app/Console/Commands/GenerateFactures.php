@@ -39,9 +39,13 @@ class GenerateFactures extends Command
     {
         $this->info('Génération en cours...');
         $compteurs = \App\Compteur::get();
+        $bar = $this->output->createProgressBar($compteurs->count());
+        $bar->start();
         foreach ($compteurs as $key => $compteur) {
             $this->info('$compteur->$numero_serie');
-
+            $compteur->generateFacture();
+            $bar->advance();
+            $bar->finish();
             // code...
         }
         $this->info('Opération effecutée ...');
@@ -58,11 +62,11 @@ class GenerateFactures extends Command
         // $bar->finish();
 
         //Exemple de generation de 100000 FACTURES pour faire apparaitre la barre de navigation.
-        $bar = $this->output->createProgressBar(100000);
-        $bar->start();
-        for ($i = 0; $i < 100000; ++$i) {
-            $bar->advance();
-        }
-        $bar->finish();
+        // $bar = $this->output->createProgressBar(100000);
+        // $bar->start();
+        // for ($i = 0; $i < 100000; ++$i) {
+        //     $bar->advance();
+        // }
+        // $bar->finish();
     }
 }
