@@ -17,6 +17,7 @@ use Illuminate\Database\Eloquent\Model as Eloquent;
  * @property \Carbon\Carbon                           $date_limite
  * @property string                                   $details
  * @property float                                    $montant
+ * @property \bigInteger                              $valeur_totale_consommee
  * @property \Carbon\Carbon                           $debut_consommation
  * @property \Carbon\Carbon                           $fin_consommation
  * @property string                                   $deleted_at

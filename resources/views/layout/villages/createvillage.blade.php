@@ -1,9 +1,5 @@
-@include('layout.dashboard.style')
-@include ('layout.dashboard.navbar')
-@include('layout.dashboard.sidebar')
-@extends('layouts.app')
-@yield('navmenuSM')
-  @yield('navbare')
+@extends('layout.dashboard.default')
+
  <div class="wrapper ">
 
             <div class="main-panel">

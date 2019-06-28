@@ -1,5 +1,4 @@
-@extends ('layout.dashboard.default')
-{{-- @extends('layouts.app') --}}
+@extends('layout.dashboard.default')
 @section('content')
 
 <div class="content">
@@ -10,7 +9,12 @@
               <div class="card">
                 <div class="card-header card-header-primary">
                   <h4 class="card-title ">APPLICATION SENFORAGE</h4>
-                  <p class="card-category"> liste des Villages</p>
+                  <p class="card-category"> liste des Villages
+                      <a href="{{route('villages.create')}}"><div class="btn btn-warning">Nouveau village <i class="material-icons">add</i></div></a>
+
+
+                  </p>
+
                 </div>
                 <div class="card-body">
                   <div class="table-responsive">

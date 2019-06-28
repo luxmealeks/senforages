@@ -53,12 +53,15 @@ class Compteur extends Eloquent
         return $this->hasMany(\App\Consommation::class, 'compteurs_id');
     }
 
+    //generer l'objet user
+
     // public function getUserAttribute()
     // {
     //     return $this->administrateurs->first()->user;
     // }
 
     // protected $appends = ['user'];
+    //fin
 
     public function getNouvelleConsommationAttribute()
     {

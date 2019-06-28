@@ -1,6 +1,3 @@
-{{-- @extends('layout.dashboard.default');
-@extends('content') --}}
-
 <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
         <div class="container-fluid">
 
@@ -49,7 +46,9 @@
                        <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="./" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}<span class="caret"></span>
-                               {{-- {{ Auth::user()->firstname }} <span class="caret"></span> --}}
+                                    {{ Auth::user()->firstname }} <span class="caret"></span>
+                                    {{-- {{ Auth::user()->roles_id }} <span class="caret"></span> --}}
+
 
                                 </a>
 
@@ -63,6 +62,17 @@
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
+
+                                    {{-- <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('profil-form').submit();">
+                                        {{ __('Profile') }}
+                                    </a>
+
+                                    <form id="profil-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form> --}}
+
                                 </div>
                             </li>
 

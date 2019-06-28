@@ -44,31 +44,22 @@
                       <tbody>
 {{-- ce code ci-dessous est commenté parcequ'on utilise ajax pour charger les données --}}
                           {{-- @foreach ($users as $user)
-
-
                         <tr>
                           <td>
                             {{$user->id}}
                           </td>
                           <td>
                             {{$user->name}}<br>
-
-
                           </td>
                           <td>
                             {{$user->firstname}}<br>
-
-
                           </td>
                           <td>
                             {{$user->email}}<br>
                              </td>
                              {{-- <td>
                             {{$user->Nom->user->name."  ".$user->Prenom->user->firstname}}
-
-
                           </td> --}}
-
                           {{-- <td>
                               <a class="btn btn-primary" href={{route('users.show',['user'=>$user->id])}}><i class="material-icons">edit</i> </a>
                               <a class="btn btn-primary" href={{route('users.show',['user'=>$user->id])}}><i class="material-icons">delete</i> </a>

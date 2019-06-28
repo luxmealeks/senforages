@@ -27,6 +27,9 @@ class VillageController extends Controller
      */
     public function create()
     {
+        // $village = \App\Village::find($village_id);
+
+        return view('layout.villages.createvillage');
     }
 
     /**

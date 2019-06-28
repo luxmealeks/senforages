@@ -1,10 +1,5 @@
-@include('layout.dashboard.style')
-@include ('layout.dashboard.navbar')
-@include('layout.dashboard.sidebar')
-@extends('layouts.app')
+@extends('layout.dashboard.style')
 
-@yield('navmenuSM')
-  @yield('navbare')
  <div class="wrapper ">
             <div class="main-panel">
                 <div class="jumbotron jumbotron-fluid">

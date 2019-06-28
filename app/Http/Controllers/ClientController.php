@@ -90,7 +90,7 @@ class ClientController extends Controller
 
         // return redirect()->route('clients.edit')->with(compact('message'));
 
-        return view('layout.clients.update')->with(compact('client', 'user', 'id'));
+        return view('layout.clients.edit')->with(compact('client', 'user', 'id'));
     }
 
     /**
@@ -103,6 +103,7 @@ class ClientController extends Controller
      */
     public function update(Request $request, Client $client)
     {
+        return view('layout.clients.update')->with(compact('client', 'user', 'id'));
     }
 
     /**

@@ -1,4 +1,4 @@
-@extends('layout.dashboarad.default')
+@extends('layout.dashboard.default')
 @section('content')
 <div class="content">
     <div class="container-fluid">
@@ -25,8 +25,8 @@
                     <input type="hidden" name="village" value="{{$village->id}}" class="form-control" name="inputName" id="inputName" placeholder="">
 
                     <div class="form-group">
-                        <label for="input-nom">Nom du client</label>
-                        <input type="text" name="nom" class="form-control" id="input-nom" aria-describedby="emailHelp" placeholder="Nom du client">
+                        <label for="input-nom">Nom</label>
+                        <input type="text" name="nom" class="form-control" id="input-nom" aria-describedby="emailHelp" placeholder="Nom du client" value={{"$user->email"}})>
                         <small id="input-nom-help" class="form-text text-muted">
                             @if ($errors->has('nom'))
                             <div class="alert alert-danger">

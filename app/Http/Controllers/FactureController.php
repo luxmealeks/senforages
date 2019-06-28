@@ -8,7 +8,7 @@ use Yajra\Datatables\Datatables;
 
 class FactureController extends Controller
 {
-    // générer des fac(ures sur la page d'acceuil.
+    // générer des factures sur la page d'acceuil.
 
     // public function stats(Request $request)
     // {
@@ -21,7 +21,7 @@ class FactureController extends Controller
 
     public function list(Request $request)
     {
-        // $factures = Facture::with('user')->get();
+        // $factures = Facture::with('consommations')->get();
 
         $factures = Facture::get();
 

@@ -1,13 +1,21 @@
 @extends('layout.dashboard.default')
-
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-12">
-            <div class="card">
-                <div class="card-header">{{ __('Enregistrement d\'un nouvel utilisateur ') }}</div>
 
+<div class="content">
+    <div class="container-fluid">
+        <div class="card">
+                <div class="card-header card-header-primary">
+                    <h3>{{ __('Enregistrement d\'un nouvel utilisateur ') }}</h3>
+                    <p class="card-category">Utilisateur
+
+                     </p>
+                </div>
                 <div class="card-body">
+                    <div class="row pt-5 pl-5">
+                        <h4>Ajout d'un nouvel utilisateur </h4>
+                          </div>
+                          <div class="row pt-5"></div>
+
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
@@ -26,12 +34,12 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="prenom" class="col-md-4 col-form-label text-md-right">{{ __('Prenom') }}</label>
+                            <label for="firstname" class="col-md-4 col-form-label text-md-right">{{ __('Prenom') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('prenom') is-invalid @enderror" name="prenom" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                <input id="firstname" type="text" class="form-control @error('firstname') is-invalid @enderror" name="firstname" value="{{ old('firstname') }}" required autocomplete="name" autofocus>
 
-                                @error('name')
+                                @error('firstname')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -81,10 +89,13 @@
                                 </button>
                             </div>
                         </div>
+                        </div>
                     </form>
-                </div>
-            </div>
         </div>
     </div>
 </div>
+
+
+
+
 @endsection
