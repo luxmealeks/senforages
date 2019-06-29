@@ -108,4 +108,4 @@ Route::get('/reglements/list/', 'ReglementController@list')->name('reglements.li
 //     return view('layout.reglements.index');
 // });
 Route::resource('reglements', 'ReglementController')->except('create');
-Route::get('/reglements/create/{factures}', 'ReglementController@create')->name('reglements.create');
+Route::get('/reglements/create/{factures?}', 'ReglementController@create')->name('reglements.create');
