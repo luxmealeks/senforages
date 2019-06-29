@@ -220,9 +220,9 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 //     ];
 // });
 $factory->define(App\Reglement::class, function (Faker\Generator $faker) {
-    $id_type = \App\Type::all()->random()->id;
-    $id_facture = App\Facture::all()->random()->id;
+    $id_type = App\Type::all()->random()->id;
     $id_comptable = App\Comptable::all()->random()->id;
+    $id_facture = App\Facture::all()->random()->id;
 
     return [
         'uuid' => $faker->uuid,

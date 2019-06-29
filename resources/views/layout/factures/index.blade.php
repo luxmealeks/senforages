@@ -117,9 +117,9 @@
                         {
                         "data": null,
                         "render": function (data, type, row) {
-                        url_e =  "{!! route('factures.edit',':id')!!}".replace(':id', data.id);
+                        url_e =  "{!! route('factures.show',':id')!!}".replace(':id', data.id);
                         url_d =  "{!! route('factures.destroy',':id')!!}".replace(':id', data.id);
-                        return '<a href='+url_e+'  class="btn btn-primary" ><i class="material-icons">edit</i></a>'+
+                        return '<a href='+url_e+'  class="btn btn-primary" ><i class="material-icons">show</i></a>'+
                         '<div class="btn btn-danger delete btn-delete-client" data-href='+url_d+'><i class="material-icons">delete</i></div>';
                         },
                         "targets": 7

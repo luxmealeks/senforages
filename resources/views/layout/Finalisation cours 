@@ -1,0 +1,31 @@
+COURS FINALISATION
+FINALISATION FACTURE
+    - télécharger template INVOICE
+    - disposer d'une interface pour lister les factures
+DEPLOIEMENT HEROKU
+        SEEDING
+        configurer le remote pour HEROKU
+        Configurer la BDD (Postgres),
+        Configurer le Middleware
+        Trusted Proxy | .gitignore
+        Configuration du composer.json  -> enlever Faker des require-dev
+
+RETROSPECTIVE
+- APP CROSSPLATFORM
+    Electron
+    Html
+    CSS
+    JS
+    PHP
+- APP WEB /HYBRIDE
+    Corova
+    IONIC
+- DEVELOPPER DES API
+    Laravel
+    Symphony
+    SailsJS
+
+-------------
+
+Dans la facture, on a les champs iD, montant valeur numero
+deux boutns : afficher et faire le reglement

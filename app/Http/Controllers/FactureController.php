@@ -21,9 +21,9 @@ class FactureController extends Controller
 
     public function list(Request $request)
     {
-        // $factures = Facture::with('consommations')->get();
+        $factures = Facture::with('consommations')->get();
 
-        $factures = Facture::get();
+        // $factures = Facture::get();
 
         return Datatables::of($factures)->make(true);
     }
@@ -43,8 +43,9 @@ class FactureController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Facture $facture)
     {
+        return $facture;
     }
 
     /**
@@ -67,6 +68,7 @@ class FactureController extends Controller
      */
     public function show(Facture $facture)
     {
+        return view('layout.factures.showfacture');
     }
 
     /**

@@ -104,8 +104,8 @@
             columns: [
                     { data: 'id', name: 'id' },
                     { data: 'date', name: 'date' },
-                    // { data: 'type.name', name: 'type.name' },
-                    // { data: 'facture.montant', name: 'facture.montant' },
+                    { data: 'type.name', name: 'type.name' },
+                    // { data: 'montant', name: 'montant' },
 
                     // { data: 'facture.date', name: 'facture.date' },
                     // { data: 'comptable.user.name', name: 'comptable.user.name' },

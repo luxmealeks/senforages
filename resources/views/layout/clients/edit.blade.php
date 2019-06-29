@@ -4,7 +4,7 @@
     <div class="container-fluid">
         <div class="card">
             <div class="card-header card-header-primary">
-                <h3 class="card-title">Enregistrement</h3>
+                <h3 class="card-title">Edtiion client</h3>
                 <p class="card-category">Clients
                     {{-- <a target="_blank" href="#">Robert McIntosh</a>. Please checkout the --}}
                     {{-- <a href="#" target="_blank">full documentation.</a> --}}
