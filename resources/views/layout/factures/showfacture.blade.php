@@ -112,7 +112,7 @@
 
                             <td>
                                 Invoice #:   {{ Auth::user()->id }}<br>
-                                {{-- Invoice #:   {{ Auth::user()->name }}<br> --}}
+                                Invoice #:   {{ Auth::user()->name }}<br>
                                 Created: January 1, 2015<br>
                                 Due: February 1, 2015
                             </td>

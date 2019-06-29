@@ -29,3 +29,6 @@ RETROSPECTIVE
 
 Dans la facture, on a les champs iD, montant valeur numero
 deux boutns : afficher et faire le reglement
+
+package php pour les chiffres et lettres des cheques
+PHP number to word

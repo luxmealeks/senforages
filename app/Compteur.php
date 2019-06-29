@@ -65,7 +65,7 @@ class Compteur extends Eloquent
 
     public function getNouvelleConsommationAttribute()
     {
-        return $this->consommations->where('facture', '!=', null);  //lister toutes les consommations qui n'ont pas de factures.
+        return $this->consommations->where('facture', '=', null);  //lister toutes les consommations qui n'ont pas de factures.
     }
 
     //génération de facture.

@@ -31,7 +31,7 @@
                          Date Fin de consommation
                         </th>
                         <th>
-                          montant
+                          Valeur Totale Consommée
                           </th>
                           <th>
                           Prenom du client
@@ -109,7 +109,7 @@
                     { data: 'debut_consommation', name: 'debut_consommation' },
                     { data: 'fin_consommation', name: 'fin_consommation' },
                     // { data: 'montant', name: 'montant' },
-                     { data: 'valeur_totale_consommee', name: 'valeur_totale_consommee' },
+                    //  { data: 'valeur_totale_consommee', name: 'valeur_totale_consommee' },
                     { data: 'user.name', name: 'user.name' },
                     { data: 'user.firstname', name: 'user.firstname' },
                     { data: null ,orderable: false, searchable: false}
@@ -136,9 +136,9 @@
                 ],
        dom: 'lBfrtip',
         buttons: [
-            'copy', 'csv', 'excel', 'pdf', 'print','columnToggle'
+            'copy', 'csv', 'excel', 'pdf', 'print'
         ],
-          "lengthMenu": [ 10, 25, 50, 1000, -1 ],[ 10, 25, 50, 1000, all ]
+          "lengthMenu": [[ 10, 25, 50, 1000, -1], [10, 25, 50, 1000, "All" ]]
           });
           $("#table-factures").off('click', '.btn-delete-client').on('click','.btn-delete-client', function(){
              var href=$(this).data('href'); //recuperer le code du bouton et le mettre dans le href

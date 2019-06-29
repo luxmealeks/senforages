@@ -19,5 +19,6 @@ class DatabaseSeeder extends Seeder
         $this->call(ClientsTableSeeder::class);
         $this->call(CompteursTableSeeder::class);
         $this->call(ConsommationsTableSeeder::class);
+        \Artisan::call('generate:factures');
     }
 }

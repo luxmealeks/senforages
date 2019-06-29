@@ -67,6 +67,8 @@ $factory->define(App\Village::class, function (Faker\Generator $faker) {
 $factory->define(App\Consommation::class, function (Faker\Generator $faker) {
     $id_agent = App\Agent::all()->random()->id;
     $id_compteur = App\Compteur::all()->random()->id;
+    $id_compteur = App\Compteur::has('abonnement')->get()->random()->id;
+
     $id_facture = App\Facture::all()->random()->id;
 
     return [

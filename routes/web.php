@@ -42,7 +42,6 @@ Route::get('/users/', function () {
 
 Route::get('/villages/list', 'VillageController@list')->name('villages.list');
 Route::get('/villages/create', 'VillageController@create')->name('villages.createvillage');
-
 Route::resource('villages', 'VillageController');
 
 Route::get('/consommations/list/{abonnement?}', 'ConsommationController@list')->name('consommations.list');
@@ -77,8 +76,8 @@ Route::resource('clients', 'ClientController');
 Route::get('compteurs', function () {
     return view('layout.compteurs.index');
 });
-Route::get('/compteurs/listfree', 'CompteurController@listfree')->name('compteurs.listfree');
 Route::get('/compteurs/list', 'CompteurController@list')->name('compteurs.list');
+Route::get('/compteurs/listfree', 'CompteurController@listfree')->name('compteurs.listfree');
 Route::resource('compteurs', 'CompteurController');
 
 Route::get('/factures/list', 'FactureController@list')->name('factures.list');
@@ -86,6 +85,13 @@ Route::get('/factures/index', function () {
     return view('layout.factures.index');
 });
 Route::resource('factures', 'FactureController');
+
+Route::get('/reglements/list/', 'ReglementController@list')->name('reglements.list');
+// Route::get('reglements', function () {
+//     return view('layout.reglements.index');
+// });
+Route::resource('reglements', 'ReglementController')->except('create');
+Route::get('/reglements/create/{factures?}', 'ReglementController@create')->name('reglements.create');
 
 Route::get('loginfor/{rolename?}', function ($rolename = null) {
     if (!isset($rolename)) {
@@ -102,10 +108,3 @@ Route::get('loginfor/{rolename?}', function ($rolename = null) {
 
     return redirect()->route('login');
 })->name('loginfor');
-
-Route::get('/reglements/list/', 'ReglementController@list')->name('reglements.list');
-// Route::get('reglements', function () {
-//     return view('layout.reglements.index');
-// });
-Route::resource('reglements', 'ReglementController')->except('create');
-Route::get('/reglements/create/{factures?}', 'ReglementController@create')->name('reglements.create');
