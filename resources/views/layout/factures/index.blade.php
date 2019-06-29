@@ -108,7 +108,8 @@
                     { data: 'date_limite', name: 'date_limite' },
                     { data: 'debut_consommation', name: 'debut_consommation' },
                     { data: 'fin_consommation', name: 'fin_consommation' },
-                    { data: 'montant', name: 'montant' },
+                    // { data: 'montant', name: 'montant' },
+                     { data: 'valeur_totale_consommee', name: 'valeur_totale_consommee' },
                     { data: 'user.name', name: 'user.name' },
                     { data: 'user.firstname', name: 'user.firstname' },
                     { data: null ,orderable: false, searchable: false}
@@ -135,9 +136,9 @@
                 ],
        dom: 'lBfrtip',
         buttons: [
-            'copy', 'csv', 'excel', 'pdf', 'print'
+            'copy', 'csv', 'excel', 'pdf', 'print','columnToggle'
         ],
-          "lengthMenu": [ 10, 25, 50, 75, 100 ]
+          "lengthMenu": [ 10, 25, 50, 1000, -1 ],[ 10, 25, 50, 1000, all ]
           });
           $("#table-factures").off('click', '.btn-delete-client').on('click','.btn-delete-client', function(){
              var href=$(this).data('href'); //recuperer le code du bouton et le mettre dans le href
