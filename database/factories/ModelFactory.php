@@ -278,6 +278,8 @@ $factory->define(App\Facture::class, function (Faker\Generator $faker) {
         'date_limite' => $faker->dateTimeBetween($startDate = 'now', $endDate = '+2 month', $timezone = null),
         'details' => $faker->text($maxNbChars = 150),
         'montant' => $faker->numberBetween(1000, 1000000),
+        // 'valeur_totale_consommee' => $faker->randomFloat(),
+
         'debut_consommation' => $faker->dateTimeBetween($startDate = '-10 month', $endDate = 'now', $timezone = null),
         'fin_consommation' => $faker->dateTimeBetween($startDate = '-10 month', $endDate = 'now', $timezone = null),
     ];

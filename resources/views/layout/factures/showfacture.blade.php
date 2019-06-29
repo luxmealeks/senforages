@@ -111,11 +111,19 @@
                             </td>
 
                             <td>
-                                Invoice #:   {{ Auth::user()->id }}<br>
-                                Invoice #:   {{ Auth::user()->name }}<br>
-                                Created: January 1, 2015<br>
-                                Due: February 1, 2015
+                                Facture N°:   {{ $facture->id}}<br>
+                                <br>
+                                Créée le: {{ $facture->created_at}}<br>
+                                 Date limite de paiement:  {{ $facture->date_limite}}<br>
+
                             </td>
+                              {{-- <td>
+                                Date limite de paiement:  {{ $facture->date_limite}}<br>
+                                <br>
+                                Date début de consommation: {{ $facture->debut_consommation}}<br>
+                                Date fin de consommation: {{ $facture->fin_consommation}}<br>
+
+                            </td> --}}
                         </tr>
                     </table>
                 </td>
@@ -125,79 +133,66 @@
                 <td colspan="2">
                     <table>
                         <tr>
+
                             <td>
-                                Sparksuite, Inc.<br>
-                                12345 Sunny Road<br>
-                                Sunnyville, CA 12345
+                               Village: {{$facture->user->client->village->nom}}<br>
+                               Commune: {{$facture->user->client->village->commune->nom}}<br>
+                               Departement: {{$facture->user->client->village->commune->arrondissement->departement->nom}}<br>
+                               Region: {{$facture->user->client->village->commune->arrondissement->departement->region->nom}}<br>
                             </td>
 
                             <td>
-                                Acme Corp.<br>
-                                John Doe<br>
-                                john@example.com
+                                Client : <br>
+                               {{$facture->user->name}}<br>
+                               {{$facture->user->firstname}}<br>
+                               {{$facture->user->email}}<br>
+                                {{$facture->user->telephone}}<br>
                             </td>
+
+
                         </tr>
+
                     </table>
                 </td>
             </tr>
 
             <tr class="heading">
-                <td>
-                    Payment Method
-                </td>
+                <td>Méthode de paiement: <strong>{{$facture->reglement->type->name}} </strong> </td>
 
-                <td>
-                    Check #
-                </td>
+                <td> <br><br></td>
+                <td> </td>
             </tr>
 
             <tr class="details">
-                <td>
-                    Check
-                </td>
-
-                <td>
-                    1000
-                </td>
+                <td></td>
+                <td></td>
+                <td> 1000 </td>
             </tr>
 
             <tr class="heading">
-                <td>
-                    Item
-                </td>
-
-                <td>
-                    Price
-                </td>
+                <td>ID cons</td>
+                <td>Date de onsommation<br> </td>
+                <td>Prix </td>
             </tr>
 
             <tr class="item">
-                <td>
-                    Website design
-                </td>
-
-                <td>
-                    $300.00
-                </td>
             </tr>
+            @foreach ($facture->consommations as $consommation)
 
             <tr class="item">
-                <td>
-                    Hosting (3 months)
-                </td>
-
-                <td>
-                    $75.00
-                </td>
+                <td>{{$consommation->id}} </td>
+                <td> {{$consommation->date}}  <br></td>
+                <td> {{$consommation->valeur}} </td>
+                @endforeach
             </tr>
 
             <tr class="item last">
                 <td>
-                    Domain name (1 year)
+                   TVA
                 </td>
 
                 <td>
-                    $10.00
+                   18%
                 </td>
             </tr>
 
@@ -205,10 +200,13 @@
                 <td></td>
 
                 <td>
-                   Total: $385.00
+                   Total: {{$consommation->montant}}
                 </td>
             </tr>
         </table>
     </div>
 </body>
 </html>
+{{-- foreach ($factures->consommation as $consommation)
+    {{$facture->consommation->valeur}}
+    endforeach  --}}

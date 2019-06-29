@@ -108,7 +108,7 @@
                     { data: 'date_limite', name: 'date_limite' },
                     { data: 'debut_consommation', name: 'debut_consommation' },
                     { data: 'fin_consommation', name: 'fin_consommation' },
-                    // { data: 'montant', name: 'montant' },
+                    { data: 'montant', name: 'montant' },
                     //  { data: 'valeur_totale_consommee', name: 'valeur_totale_consommee' },
                     { data: 'user.name', name: 'user.name' },
                     { data: 'user.firstname', name: 'user.firstname' },

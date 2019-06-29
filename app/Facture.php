@@ -61,9 +61,9 @@ class Facture extends Eloquent
     //     return $this->hasMany(\App\Reglement::class, 'factures_id');
     // }
 
-    public function reglements()
+    public function reglement()
     {
-        return $this->hasMany(\App\Reglement::class, 'factures_id');
+        return $this->hasOne(\App\Reglement::class, 'factures_id');
     }
 
     // public function client()
