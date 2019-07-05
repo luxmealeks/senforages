@@ -176,6 +176,7 @@ return [
         Mpociot\LaravelTestFactoryHelper\TestFactoryHelperServiceProvider::class,
         App\Providers\MyBladeServiceProvider::class,
         Barryvdh\Snappy\ServiceProvider::class,
+        Yajra\DataTables\DataTablesServiceProvider::class,
     ],
 
     /*
@@ -228,5 +229,6 @@ return [
         //  Barryvdh\Snappy\ServiceProvider::class,
         'PDF' => Barryvdh\Snappy\Facades\SnappyPdf::class,
         'SnappyImage' => Barryvdh\Snappy\Facades\SnappyImage::class,
+        'DataTables' => Yajra\DataTables\Facades\DataTables::class,
     ],
 ];

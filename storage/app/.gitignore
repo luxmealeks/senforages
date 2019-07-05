@@ -1,6 +1,6 @@
 *
 !public/
 !.gitignore
-# !.regions.min.json
+!.regions.min.json
 
 

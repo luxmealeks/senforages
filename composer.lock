@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "c5167fa91dff4360d698340c22d79351",
+    "content-hash": "37de8758110d6f6058d1dc87e56047fb",
     "packages": [
         {
             "name": "barryvdh/laravel-snappy",
@@ -1040,16 +1040,16 @@
         },
         {
             "name": "kwn/number-to-words",
-            "version": "1.6.4",
+            "version": "1.6.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kwn/number-to-words.git",
-                "reference": "226ced31deb2c0ab6aeea38eb42d6b605ccc482f"
+                "reference": "831da2a62ebcef03daf4fdc1f0b09e999c7c5f48"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kwn/number-to-words/zipball/226ced31deb2c0ab6aeea38eb42d6b605ccc482f",
-                "reference": "226ced31deb2c0ab6aeea38eb42d6b605ccc482f",
+                "url": "https://api.github.com/repos/kwn/number-to-words/zipball/831da2a62ebcef03daf4fdc1f0b09e999c7c5f48",
+                "reference": "831da2a62ebcef03daf4fdc1f0b09e999c7c5f48",
                 "shasum": ""
             },
             "require": {
@@ -1080,24 +1080,25 @@
                 "currency",
                 "money",
                 "number",
+                "numbers",
                 "string",
                 "to",
                 "words"
             ],
-            "time": "2019-05-13T20:56:54+00:00"
+            "time": "2019-07-04T20:35:51+00:00"
         },
         {
             "name": "laravel/framework",
-            "version": "v5.8.26",
+            "version": "v5.8.27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "1d8ec9afdedc79314c18715056b8143d7e1fac31"
+                "reference": "f1dccffb96f614895393e27e4667105a05407af5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/1d8ec9afdedc79314c18715056b8143d7e1fac31",
-                "reference": "1d8ec9afdedc79314c18715056b8143d7e1fac31",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/f1dccffb96f614895393e27e4667105a05407af5",
+                "reference": "f1dccffb96f614895393e27e4667105a05407af5",
                 "shasum": ""
             },
             "require": {
@@ -1231,7 +1232,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2019-06-25T16:20:51+00:00"
+            "time": "2019-07-02T13:43:47+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -3911,16 +3912,16 @@
         },
         {
             "name": "filp/whoops",
-            "version": "2.4.0",
+            "version": "2.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filp/whoops.git",
-                "reference": "1a1a1044ad00e285bd2825fac4c3a0443d90ad33"
+                "reference": "6fb502c23885701a991b0bba974b1a8eb6673577"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filp/whoops/zipball/1a1a1044ad00e285bd2825fac4c3a0443d90ad33",
-                "reference": "1a1a1044ad00e285bd2825fac4c3a0443d90ad33",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/6fb502c23885701a991b0bba974b1a8eb6673577",
+                "reference": "6fb502c23885701a991b0bba974b1a8eb6673577",
                 "shasum": ""
             },
             "require": {
@@ -3968,7 +3969,7 @@
                 "throwable",
                 "whoops"
             ],
-            "time": "2019-06-23T09:00:00+00:00"
+            "time": "2019-07-04T09:00:00+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",

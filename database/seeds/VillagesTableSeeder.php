@@ -10,7 +10,7 @@ class VillagesTableSeeder extends Seeder
     public function run()
     {
         $faker = \Faker\Factory::create();
-        // $regions_json=Storage::get("regions.min.json");
+        $regions_json = Storage::get('regions.min.json');
         $regions = json_decode($regions_json);
 
         foreach ((array) $regions->region as $region) {
