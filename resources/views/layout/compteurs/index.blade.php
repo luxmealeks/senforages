@@ -13,8 +13,9 @@
                 <div class="card-header card-header-primary">
                   <h4 class="card-title ">SENFORAGE</h4>
                   <p class="card-category"> Compteurs
-                      <a href="{{route('compteurs.create')}}"><div class="btn btn-warning">Nouveau Compteur <i class="material-icons">add</i></div></a>
-                  </p>
+                      <a href="{{route('compteurs.createcompteur')}}"><div class="btn btn-warning">Nouveau Compteur <i class="material-icons">add</i></div></a>
+
+                    </p>
                 </div>
                 <div class="card-body">
                   <div class="table-responsive">

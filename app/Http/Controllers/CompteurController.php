@@ -39,8 +39,9 @@ class CompteurController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
+        return view('layout.compteurs.createcompteur');
     }
 
     /**
@@ -52,6 +53,15 @@ class CompteurController extends Controller
      */
     public function store(Request $request)
     {
+        Compteur::create($request->all());
+
+        $this->validate(
+            $request, [
+                'numero_serie' => 'required|string|max:50',
+            ]
+        );
+
+        return view('layout.compteurs.index');
     }
 
     /**
@@ -72,8 +82,12 @@ class CompteurController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function edit(Compteur $compteur)
+    public function edit(Compteur $request)
     {
+        $compteur_id = $request->input('compteur');
+        $compteur = \App\Compteur::find($compteur_id);
+
+        return view('layout.compteurs.edit', compact('compteur'));
     }
 
     /**

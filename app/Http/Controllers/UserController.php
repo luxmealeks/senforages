@@ -44,6 +44,9 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
+        // User::create($request->all());
+
+        // return 'Utilisateur créé !';
     }
 
     /**
@@ -66,6 +69,7 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
+        return view('layout.clients.edit', compact('user'));
     }
 
     /**
@@ -78,6 +82,9 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
+        $user->update($request->all());
+
+        return 'Utilisateur modifié !';
     }
 
     /**

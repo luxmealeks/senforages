@@ -4,7 +4,7 @@
     <div class="container-fluid">
         <div class="card">
             <div class="card-header card-header-primary">
-                <h3 class="card-title">Edtiion client</h3>
+                <h3 class="card-title">Edtition client</h3>
                 <p class="card-category">Clients
                     {{-- <a target="_blank" href="#">Robert McIntosh</a>. Please checkout the --}}
                     {{-- <a href="#" target="_blank">full documentation.</a> --}}
@@ -12,26 +12,41 @@
             </div>
             <div class="card-body">
                 <div class="row pt-5 pl-5">
-                    <h4>
+                    {{-- <h4>
                         Village: {{$village->nom ?? 'Aucun village choisi'}}<br/>
                         Commune: {{$village->commune->nom ?? ''}}
-                    </h4>
+                    </h4> --}}
                 </div>
                 <div class="row pt-5"></div>
 
                 <form method="POST" action="{{route('clients.store')}}">
                     {{ csrf_field() }}
 
-                    <input type="hidden" name="village" value="{{$village->id}}" class="form-control" name="inputName" id="inputName" placeholder="">
+                    {{-- <input type="hidden" name="village" value="{{$village->id}}" class="form-control" name="inputName" id="inputName" placeholder=""> --}}
 
                     <div class="form-group">
                         <label for="input-nom">Nom</label>
-                        <input type="text" name="nom" class="form-control" id="input-nom" aria-describedby="emailHelp" placeholder="Nom du client" value={{"$user->email"}})>
+                        <input type="text" name="nom" class="form-control" id="input-nom" aria-describedby="Nom" placeholder="Nom du client" value={{"$user->name"}}>
                         <small id="input-nom-help" class="form-text text-muted">
                             @if ($errors->has('nom'))
                             <div class="alert alert-danger">
                                 <ul>
                                     @foreach ($errors->get('nom') as $message)
+                                    <li>{{ $message }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                            @endif
+                        </small>
+                    </div>
+                          <div class="form-group">
+                        <label for="input-firstname">Prenom</label>
+                        <input type="text" name="firstname" class="form-control" id="input-firstname" aria-describedby="Prenom" placeholder="Prenom du client" value={{"$user->firstname"}}>
+                        <small id="input-firstname-help" class="form-text text-muted">
+                            @if ($errors->has('firstname'))
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->get('firstname') as $message)
                                     <li>{{ $message }}</li>
                                     @endforeach
                                 </ul>
@@ -50,6 +65,7 @@
                             @endif
                         </small>
                     </div>
+{{--
                     <div class="form-group">
                         <label for="exampleInputPassword1">Password</label>
                         <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
@@ -67,7 +83,7 @@
                                 <span class="check"></span>
                             </span>
                         </label>
-                    </div>
+                    </div> --}}
 
                     <button type="submit" class="btn btn-primary">Enregistrer</button>
                 </form>
