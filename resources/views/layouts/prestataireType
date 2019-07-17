@@ -1,0 +1,124 @@
+<form class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Enregistrement prestataire</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">DATE AGREMENT</label>
+  <div class="col-md-4">
+  <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="form-control input-md">
+
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="raisonsociale">RAISON SOCIALE </label>
+  <div class="col-md-4">
+  <input id="raisonsociale" name="raisonsociale" type="text" placeholder="RAISON SOCIALE " class="form-control input-md">
+
+  </div>
+</div>
+
+<!-- Textarea -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="adresse">ADRESSE</label>
+  <div class="col-md-4">
+    <textarea class="form-control" id="adresse" name="adresse">ADRESSE</textarea>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="telephone">TELEPHONE</label>
+  <div class="col-md-4">
+  <input id="telephone" name="telephone" type="text" placeholder="TELEPHONE" class="form-control input-md">
+
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="fax">FAX</label>
+  <div class="col-md-4">
+  <input id="fax" name="fax" type="text" placeholder="FAX" class="form-control input-md">
+
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="E-MAIL">E-MAIL</label>
+  <div class="col-md-4">
+  <input id="E-MAIL" name="E-MAIL" type="text" placeholder="E-MAIL" class="form-control input-md">
+
+  </div>
+</div>
+
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="secteuractivite">SECTEUR D'ACTIVITE</label>
+  <div class="col-md-4">
+    <select id="secteuractivite" name="secteuractivite" class="form-control">
+      <option value="1">BTP</option>
+      <option value="2">Agriculture</option>
+    </select>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="ninea">NINEA</label>
+  <div class="col-md-4">
+  <input id="ninea" name="ninea" type="text" placeholder="NINEA" class="form-control input-md">
+
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="registrecommerce">REGISTRE DE COMMERCE</label>
+  <div class="col-md-4">
+  <input id="registrecommerce" name="registrecommerce" type="text" placeholder="REGISTRE DE COMMERCE" class="form-control input-md">
+
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="classeagrement">CLASSE D'AGREMENT</label>
+  <div class="col-md-4">
+  <input id="classeagrement" name="classeagrement" type="text" placeholder="CLASSE D'AGREMENT" class="form-control input-md">
+
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="EVALUATION PERFORMANCE">EVALUATION PERFORMANCE</label>
+  <div class="col-md-4">
+  <input id="EVALUATION PERFORMANCE" name="EVALUATION PERFORMANCE" type="text" placeholder="EVALUATION PERFORMANCE" class="form-control input-md">
+
+  </div>
+</div>
+
+<!-- File Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="filebutton">Joindre fichier</label>
+  <div class="col-md-4">
+    <input id="filebutton" name="filebutton" class="input-file" type="file">
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="singlebutton">Soumettre</label>
+  <div class="col-md-4">
+    <button id="singlebutton" name="singlebutton" class="btn btn-primary">Soumettre</button>
+  </div>
+</div>
+
+</fieldset>
+</form>

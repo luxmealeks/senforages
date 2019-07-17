@@ -1,4 +1,5 @@
 @extends('layout.dashboard.default')
+
 @section('content')
 <div class="content">
     <div class="container-fluid">
@@ -25,7 +26,7 @@
                     <input type="hidden" name="village" value="{{$village->id}}" class="form-control" name="inputName" id="inputName" placeholder="">
 
                     <div class="form-group">
-                        <label for="input-nom">Nom du client</label>
+                        {{-- <label for="input-nom">Nom</label> --}}
                         <input type="text" name="nom" class="form-control" id="input-nom" aria-describedby="emailHelp" placeholder="Nom du client">
                         <small id="input-nom-help" class="form-text text-muted">
                             @if ($errors->has('nom'))
@@ -39,8 +40,23 @@
                             @endif
                         </small>
                     </div>
+                     <div class="form-group">
+                        {{-- <label for="input-nom">Prenom</label> --}}
+                        <input type="text" name="prenom" class="form-control" id="input-prenom" aria-describedby="prenomlHelp" placeholder="Prenom du client">
+                        <small id="input-nom-help" class="form-text text-muted">
+                            @if ($errors->has('prenom'))
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->get('prenom') as $message)
+                                    <li>{{ $message }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                            @endif
+                        </small>
+                    </div>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
+                        {{-- <label for="exampleInputEmail1">Email address</label> --}}
                         <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                         <small id="emailHelp" class="form-text text-muted">
                             @if ($errors->has('email'))

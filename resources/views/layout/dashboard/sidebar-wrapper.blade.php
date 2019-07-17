@@ -24,7 +24,9 @@
                                 <i class="material-icons">account_balance</i>
                                 <p>Villages</p>
                             </a>
+
                         </li>
+
                         <li class="nav-item ">
                             <a class="nav-link" href="{{route('clients.index')}}">
                                 <i class="material-icons">person_pin</i></i>

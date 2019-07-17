@@ -32,3 +32,66 @@ deux boutns : afficher et faire le reglement
 
 package php pour les chiffres et lettres des cheques
 PHP number to word
+
+
+
+
+
+//gestion des acces selon les roles
+
+public function hasRole ($rolename){
+    return $this->role->name==$rolename
+LES MIDDELWARE
+
+
+$user=User::first();
+$user->role->name;
+if($user->hasRole('Administrateur'){
+    ech "Ok"
+}
+
+)
+
+in_Array()=> permet de recherher si un élément est dans un tableau
+$roles=> sera un tableau
+
+public function hasAnyRoles($roles){
+    in_Array($this->role->ame, $roles);
+}
+
+php artisan make:middleware CheckRoles : permet de creer le middleware
+
+$this->middleware('roles:Administrateur'BARRE VERTICALE'GESTIONNAIRE
+$roleArray = explode("bv",$roles);
+if (!$request()->user()->hasAnyRoles($roleArray){
+    return redirec()->route('home')->with['permission'=>"Action non autorisée"];
+
+}
+)
+
+
+
+dans view/auth/login.blade.php et mettre le fichier de template de test
+
+
+
+
+
+
+CREER SES PROPRES COMMANDES ARTISAN
+php artisan commande:option argument
+
+faire une commande artisan pour la génération des factures
+exemple :
+    php artisan make:commande GenerateFactures;
+
+la signature est un element important
+exmp
+'route:list'
+
+sur les commandes artisan on peut emettre des messages d'information à mettre dans la fontion handle
+
+packages pour installer l'application :
+pour se faire, creer un nouveau controller pour lancer l'installation
+
+

@@ -1,12 +1,12 @@
 <!DOCTYPE HTML>
 <!--
-	SENFORAGE by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+	SENFORAGE by SenForage App
+	SenForage App.co @SenForage Appco
+	Released for free under the Creative Commons Attribution 3.0 license (SenForage App.co/license)
 -->
 <html>
 	<head>
-		<title>SENFORAGE by TEMPLATED</title>
+		<title>SENFORAGE</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description" content="" />
@@ -38,7 +38,7 @@
 				<div class="inner">
 					<h1>BIENVENUE SENFORAGE</h1>
 					<p>A responsive business oriented template with a video background<br />
-					designed by <a href="https://templated.co/">TEMPLATED</a> and released under the Creative Commons License.</p>
+					designed by <a href="https://SenForage App.co/">SenForage App</a> and released under the Creative Commons License.</p>
 				</div>
 				<video autoplay loop muted playsinline src="images/banner.mp4"></video>
 			</section>

@@ -4,9 +4,17 @@ namespace App\Http\Controllers;
 
 use App\Village;
 use Illuminate\Http\Request;
+use Yajra\Datatables\Datatables;
 
 class VillageController extends Controller
 {
+    public function list(Request $request)
+    {
+        $village = Village::with('clients')->get();
+
+        return Datatables::of($village)->make(true);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -27,8 +35,6 @@ class VillageController extends Controller
      */
     public function create()
     {
-        // $village = \App\Village::find($village_id);
-
         return view('layout.villages.createvillage');
     }
 
@@ -41,6 +47,7 @@ class VillageController extends Controller
      */
     public function store(Request $request)
     {
+        return view('layout.villages.createvillage');
     }
 
     /**
@@ -61,8 +68,19 @@ class VillageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function edit(Village $village)
+    public function edit($id)
     {
+        // $village = \App\Village::find($village_id);
+        $village = Village::find($id);
+        // $user = $client->user;
+
+        // return $user; //on le fait pour tester ce qu'il retourne.
+
+        $message = 'modifier'.$village->nom.'Edition effectuée';
+
+        // return redirect()->route('clients.edit')->with(compact('message'));
+
+        return view('layout.villages.editvillage');
     }
 
     /**

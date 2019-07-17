@@ -9,8 +9,8 @@
               <div class="card">
                 <div class="card-header card-header-primary">
                   <h4 class="card-title ">APPLICATION SENFORAGE</h4>
-                  <p class="card-category"> liste des Villages
-                      <a href="{{route('villages.create')}}"><div class="btn btn-warning">Nouveau village <i class="material-icons">add</i></div></a>
+                  <p class="card-category"> Modification
+                      {{-- <a href="{{route('villages.edit')}}"><div class="btn btn-warning">Nouveau village <i class="material-icons">edit</i></div></a> --}}
 
 
                   </p>
@@ -35,44 +35,34 @@
                       </thead>
                       <tbody>
 
-                          @foreach ($villages as $village)
 
 
+                    <form method="POST" action="{{route('villages.store')}}">
+                    {{ csrf_field() }}
 
-                        <tr>
-                          <td>
-                            {{$village->id}}
-                          </td>
-                          <td>
-                            {{$village->nom}}<br>
-                            Region de {{$village->commune->arrondissement->departement->region->nom}}<br>
-                            Commune de {{$village->commune->nom}}
+                    {{-- <input type="hidden" name="village" value="{{$village->id}}" class="form-control" name="inputName" id="inputName" placeholder=""> --}}
 
-                          </td>
-                          <td>
-                                {{$village->chef->user->name."  ".$village->chef->user->firstname}}
-                          </td>
-                          <td>
-                              <a class="btn btn-primary" href={{route('villages.edit',['village'=>$village->id])}}><i class="material-icons">edit</i> </a>
+                    <div class="form-group">
+                        <label for="input-nom">Nom</label>
+                        <input type="text" name="village" class="form-control" id="input-nom" aria-describedby="Nom" placeholder="Nom du village" >
+                        <small id="input-nom-help" class="form-text text-muted">
+                            @if ($errors->has('nom'))
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->get('nom') as $message)
+                                    <li>{{ $message }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                            @endif
+                        </small>
+                    </div>
 
-                            </td>
 
-                        </tr>
-                        @endforeach
-                      </tbody>
+                    <button type="submit" class="btn btn-primary">Enregistrer</button>
+                </form>
 
-                    </table>
-                    {{ $villages->links() }}
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-12">
 
-            </div>
-          </div>
-        </div>
-      </div>
       @endsection
 
 {{--
@@ -87,8 +77,8 @@
             "ajax": "{{route('villages.list')}}",
             columns: [
                     { data: 'id', name: 'id' },
-                    { data: 'name', name: 'user.name' },
-                    { data: 'firstname', name: 'user.firstname' },
+                    { data: 'name', name: 'village.name' },
+                    { data: 'firstname', name: 'village.firstname' },
                     { data: 'infos', ame: 'role.name' },
                     { data: null ,orderable: false, searchable: false}
 
@@ -107,7 +97,7 @@
                     // {
                     //     "data": null,
                     //     "render": function (data, type, row) {
-                    //         url =  "{!! route('users.edit',':id')!!}".replace(':id', data.id);
+                    //         url =  "{!! route('villages.edit',':id')!!}".replace(':id', data.id);
                     //         return check_status(data,url);
                     //     },
                     //     "targets": 1

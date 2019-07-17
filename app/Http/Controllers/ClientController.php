@@ -32,7 +32,7 @@ class ClientController extends Controller
      */
     public function create(Request $request)
     {
-        $village_id = $request->input('village');
+        $village_id = $request->input('village'); //on recupere le village
         $village = \App\Village::find($village_id);
 
         return view('layout.clients.create', compact('village'));

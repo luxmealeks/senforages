@@ -17,7 +17,7 @@
                 <div class="card-header card-header-primary">
                   <h4 class="card-title ">SENFORAGE</h4>
                   <p class="card-category"> Clients
-                      <a href="{{route('clients.create')}}"><div class="btn btn-warning">Ajouter Client <i class="material-icons">add</i></div></a>
+                      <a href="{{route('clients.selectvillage')}}"><div class="btn btn-warning">Ajouter Client <i class="material-icons">add</i></div></a>
                   </p>
                 </div>
                 <div class="card-body">

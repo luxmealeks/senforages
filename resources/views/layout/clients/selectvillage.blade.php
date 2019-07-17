@@ -54,7 +54,7 @@
       @push('scripts')
       <script type="text/javascript">
       $(document).ready(function () {
-          $('#table-villages').DataTable( {
+          $('#table-villages').DataTable({
             "processing": true,
             "serverSide": true,
             "ajax": "{{route('villages.list')}}",
