@@ -5,9 +5,6 @@ use Illuminate\Support\Str;
 
 class RolesTableSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run()
     {
         $role1 = App\Role::firstOrCreate(['name' => 'Agent'], ['uuid' => Str::uuid()]);
