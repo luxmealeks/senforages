@@ -22,7 +22,11 @@ class UserController extends Controller
      */
     public function index()
     {
+        $users = User::all()->load(['agent', 'administrateur', 'client', 'gestionnaire', 'comptable'])->paginate(10);
+
         return view('layout.users.index');
+
+        // return view('layout.users.index');
     }
 
     /**
@@ -47,6 +51,7 @@ class UserController extends Controller
         // User::create($request->all());
 
         // return 'Utilisateur créé !';
+        return view('layout.users.create');
     }
 
     /**
@@ -58,6 +63,7 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
+        return view('layout.users.index');
     }
 
     /**
@@ -67,9 +73,15 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $user)
+    public function edit($id)
     {
-        return view('layout.clients.edit', compact('user'));
+        $user = User::find($id);
+
+        $message = 'modifier'.$user->name.''.$user->firstname.'Edition effectuée';
+
+        // return redirect()->route('clients.edit')->with(compact('message'));
+
+        return view('layout.users.edit')->with(compact('user', 'id'));
     }
 
     /**
@@ -83,8 +95,6 @@ class UserController extends Controller
     public function update(Request $request, User $user)
     {
         $user->update($request->all());
-
-        return 'Utilisateur modifié !';
     }
 
     /**
@@ -96,5 +106,11 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
+        $user->delete();
+        // $user = User::find($id);
+        // $user->delete();
+        // $message = $user->firstname.' '.$user->name.' a été supprimé(e)';
+
+        // return redirect()->route('users.index')->with(compact('message'));
     }
 }

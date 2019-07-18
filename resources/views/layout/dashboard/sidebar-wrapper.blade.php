@@ -7,12 +7,7 @@
                                 <p>Dashboard</p>
                             </a>
                         </li>
-                        <li class="nav-item ">
-                            <a class="nav-link" href="./parametrage">
-                                <i class="material-icons">dehaze</i>
-                                <p>Paramétrage</p>
-                            </a>
-                        </li>
+
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('users.index')}}">
                                 <i class="material-icons">people</i>

@@ -10,7 +10,7 @@
                 <div class="card-header card-header-primary">
                   <h4 class="card-title ">APPLICATION SENFORAGE</h4>
                   <p class="card-category"> liste des Villages
-                      <a href="{{route('villages.create')}}"><div class="btn btn-warning">Nouveau village <i class="material-icons">add</i></div></a>
+                      <a href="{{route('villages.createvillage')}}"><div class="btn btn-warning">Nouveau village <i class="material-icons">add</i></div></a>
 
 
                   </p>
@@ -53,7 +53,7 @@
                                 {{$village->chef->user->name."  ".$village->chef->user->firstname}}
                           </td>
                           <td>
-                              <a class="btn btn-primary" href={{route('villages.edit',['village'=>$village->id])}}><i class="material-icons">edit</i> </a>
+                              <a class="btn btn-primary" href={{route('villages.editvillage',['village'=>$village->id])}}><i class="material-icons">edit</i> </a>
 
                             </td>
 
@@ -75,7 +75,7 @@
       </div>
       @endsection
 
-{{--
+
       @push('scripts')
 
   <script type="text/javascript">
@@ -119,4 +119,4 @@
       </script>
 
 
-      @endpush --}}
+      @endpush

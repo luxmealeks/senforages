@@ -59,6 +59,7 @@ class VillageController extends Controller
      */
     public function show(Village $village)
     {
+        return view('layout.villages.index');
     }
 
     /**
@@ -72,7 +73,7 @@ class VillageController extends Controller
     {
         // $village = \App\Village::find($village_id);
         $village = Village::find($id);
-        // $user = $client->user;
+        // $village_ = $village->nom;
 
         // return $user; //on le fait pour tester ce qu'il retourne.
 
@@ -80,7 +81,7 @@ class VillageController extends Controller
 
         // return redirect()->route('clients.edit')->with(compact('message'));
 
-        return view('layout.villages.editvillage');
+        return view('layout.villages.editvillage')->with(compact('village', 'id'));
     }
 
     /**

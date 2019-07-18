@@ -1,15 +1,18 @@
 @extends('layout.dashboard.default')
 
 @section('content')
-            @extends('layout.users.profile')
+  <div class="content">
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="card">
+                                <div class="card-header card-header-primary">
+                                    <h4 class="card-title">Modifier utilisateur</h4>
+                                </div>
+                                <div class="card-body">
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Modifier un utilisateur</div>
-                <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ route('users.edit', $user->id) }}">
+                    <form class="form-horizontal" method="GET" action="{{ route('users.update', $user->id) }}">
                         {{ csrf_field() }}
                         {{ method_field('PUT') }}
                         <div class="form-group">
@@ -24,12 +27,7 @@
                                 <input id="firstname" type="text" class="form-control" name="firstname" value="{{ $user->firstname }}" required autofocus>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="email" class="col-md-4 control-label">E-Mail</label>
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ $user->email }}" required>
-                            </div>
-                        </div>
+
                         <div class="form-group">
                             <label for="email" class="col-md-4 control-label">E-Mail</label>
                             <div class="col-md-6">

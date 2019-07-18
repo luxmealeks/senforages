@@ -23,12 +23,12 @@
                         <th>
                           Village
                         </th>
-                        <th>
+                        {{-- <th>
                             Commune
                         </th>
                         <th>
                           Region
-                        </th>
+                        </th> --}}
                         <th>
                           Selectionner
                           </th>
@@ -61,9 +61,9 @@
             columns: [
                     { data: 'id', name: 'id' },
                     { data: 'nom', name: 'nom' },
-                    { data: 'commune.nom', name: 'commune.nom' },
-                    { data: 'commune.arrondissement.departement.region.nom', name: 'commune.arrondissement.departement.region.nom' },
-                    { data: null ,orderable: false, searchable: false}
+                    // { data: 'commune.nom', name: 'commune.nom' },
+                    // { data: 'commune.arrondissement.departement.region.nom', name: 'commune.arrondissement.departement.region.nom' },
+                    // { data: null ,orderable: false, searchable: false}
 
                 ],
                 "columnDefs": [
@@ -73,7 +73,7 @@
                         url_e =  "{!! route('clients.create','village=:id')!!}".replace(':id', data.id);
                         return '<a href='+url_e+'  class=" btn btn-primary " ><i class="material-icons">edit</i></a>';
                         },
-                        "targets": 4
+                        "targets": 2
                         },
 
                 ],

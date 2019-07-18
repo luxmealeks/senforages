@@ -41,6 +41,8 @@ Route::resource('users', 'UserController');
 
 Route::get('/villages/list', 'VillageController@list')->name('villages.list');
 Route::get('/villages/createvillage', 'VillageController@create')->name('villages.createvillage');
+Route::get('/villages/editvillage', 'VillageController@edit')->name('villages.editvillage');
+
 Route::resource('villages', 'VillageController');
 
 Route::get('/consommations/list/{abonnement?}', 'ConsommationController@list')->name('consommations.list');

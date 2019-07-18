@@ -22,7 +22,7 @@
                 <form method="POST" action="{{route('clients.store')}}">
                     {{ csrf_field() }}
 
-                    {{-- <input type="hidden" name="village"  class="form-control" name="inputName" id="inputName" placeholder="" value={{"$village->id"}}> --}}
+                    <input type="hidden" name="village"  class="form-control" name="inputName" id="inputName" placeholder="" value={{"$village->id"}}>
 
                     <div class="form-group">
                         <label for="input-nom">Nom</label>
