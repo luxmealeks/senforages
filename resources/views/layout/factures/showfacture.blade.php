@@ -107,7 +107,7 @@
                     <table>
                         <tr>
                             <td class="title">
-                                <img src="https://www.sparksuite.com/images/logo.png" style="width:100%; max-width:300px;">
+                               <H5> SENFORAGE APP</H5>
                             </td>
 
                             <td>

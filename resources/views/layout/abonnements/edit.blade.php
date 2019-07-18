@@ -9,8 +9,8 @@
               <div class="card">
                 <div class="card-header card-header-primary">
                   <h4 class="card-title ">SENFORAGE</h4>
-                  <p class="card-category"> Abonnements
-                      <a href="{{route('abonnements.selectclient')}}"><div class="btn btn-warning">Nouvel Abonnement <i class="material-icons">add</i></div></a>
+                  <p class="card-category"> Modification Abonnements
+                      <a href="{{route('abonnements.edit')}}"><div class="btn btn-warning">Nouvel Abonnement <i class="material-icons">add</i></div></a>
                   </p>
                 </div>
                 <div class="card-body">

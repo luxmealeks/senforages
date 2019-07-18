@@ -103,7 +103,7 @@ class AbonnementController extends Controller
         $compteur = $abonnement->compteur;
         $abonnement->load('client.user');
 
-        return view('abonnements.show', compact(['compteur', 'abonnement']));
+        return view('layout.abonnements.show', compact(['compteur', 'abonnement']));
     }
 
     /**
@@ -115,6 +115,7 @@ class AbonnementController extends Controller
      */
     public function edit(Abonnement $abonnement)
     {
+        return view('layout.abonnements.edit');
     }
 
     /**
